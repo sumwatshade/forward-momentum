@@ -3,7 +3,11 @@ import congressData from 'congress-legislators/legislators-current.yaml';
 const lookup = new Map();
 congressData.forEach((legislator, index) => {
     const { id: { bioguide } } = legislator;
-    const state = legislator.terms[legislator.terms.length - 1].state.toLowerCase();
+    legislator.term = legislator.terms[legislator.terms.length - 1];
+    delete legislator.terms;
+
+    const state = legislator.term.state.toLowerCase();
+
 
     const prevLookup = lookup.get(state);
     if (!prevLookup || !Array.isArray(prevLookup)) {

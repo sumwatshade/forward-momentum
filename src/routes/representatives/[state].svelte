@@ -14,11 +14,27 @@
 </script>
 
 <script>
+  import Representative from "../../components/Representative.svelte";
   export let reps;
-  import representative from "../../components/Representative.svelte";
+
+  const senate = [];
+  const house = reps.filter(rep => {
+    if(rep.term.type === 'sen') {
+      senate.push(rep);
+      return false;
+    }
+
+    return true;
+  })
+  
 </script>
 
 <style>
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
 
 </style>
 
@@ -26,12 +42,24 @@
   <title>California</title>
 </svelte:head>
 
-<ul>
-  {#each reps as rep}
+<h1>US Senate ({senate.length})</h1>
+<div class="grid">
+  {#each senate as rep}
     <!-- we're using the non-standard `rel=prefetch` attribute to
             tell Sapper to load the data for the page as soon as
             the user hovers over the link or taps it, instead of
             waiting for the 'click' event -->
-    <representative {rep} />
+    <Representative {rep} />
   {/each}
-</ul>
+</div>
+
+<h1>House of representatives ({house.length})</h1>
+<div class="grid">
+  {#each house as rep}
+    <!-- we're using the non-standard `rel=prefetch` attribute to
+            tell Sapper to load the data for the page as soon as
+            the user hovers over the link or taps it, instead of
+            waiting for the 'click' event -->
+    <Representative {rep} />
+  {/each}
+</div>
