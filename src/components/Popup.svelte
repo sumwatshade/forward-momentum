@@ -61,7 +61,7 @@
 </style>
 
 <h2>{data.name.official_full}</h2>
-<img class="portrait" loading="lazy" src={`https://theunitedstates.io/images/congress/original/${id.bioguide}.jpg`} alt={name.official_full || `${name.first} ${name.last}`} />
+<img class="portrait" loading="lazy" src={`https://theunitedstates.io/images/congress/225x275/${id.bioguide}.jpg`} alt={name.official_full || `${name.first} ${name.last}`} />
 
 <div class="basic-info">
   <h3>{term.party} - {title}{districtInfo}</h3>

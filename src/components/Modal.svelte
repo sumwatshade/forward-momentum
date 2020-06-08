@@ -132,9 +132,9 @@ setContext(key, { open, close });
   }
 
   .content {
-    position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     padding: 1rem;
     max-height: calc(100vh - 8rem);

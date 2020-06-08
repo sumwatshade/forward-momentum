@@ -62,7 +62,7 @@ const showPopup = () => {
 </style>
 
 <div in:fade on:click={showPopup} class={`container ${term.party.toLowerCase()}`}>
-  <img class="portrait" loading="lazy" src={`https://theunitedstates.io/images/congress/original/${id.bioguide}.jpg`} alt={name.official_full || `${name.first} ${name.last}`} />
+  <img class="portrait" loading="lazy" src={`https://theunitedstates.io/images/congress/225x275/${id.bioguide}.jpg`} alt={name.official_full || `${name.first} ${name.last}`} />
   <h2>{name.official_full || `${name.first} ${name.last}`}</h2>
   <h3>{term.party}</h3>
 </div>
