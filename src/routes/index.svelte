@@ -42,16 +42,19 @@
 }
 
 .border-wrap {
-  max-width: 250px;
-  position: relative;
+  display: flex;
   padding: 3px;
   margin: 20px;
 }
 
 @media (max-width: 620px) {
-	.state {
+	.border-wrap {
 		width: 100%;
-	}
+  }
+  
+  .state {
+    width: 100%;
+  }
 }
 
 </style>
