@@ -43,7 +43,6 @@ nav {
   max-width: 980px;
   padding-left: 20px;
   padding-right: 20px;
-  margin: auto;
   box-sizing: border-box;
   display: flex;
   align-items: center;
