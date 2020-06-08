@@ -8,7 +8,7 @@ import Popup from './Popup.svelte';
 export let rep;
 const { open } = getContext('simple-modal');
 
-const { name, term } = rep;
+const { name, term, id } = rep;
 
 const showPopup = () => {
   open(Popup, { data: rep });
@@ -40,6 +40,9 @@ const showPopup = () => {
   .container {
     width: 100%;
   }
+  .portrait {
+    display: none;
+  }
 }
 
 .republican {
@@ -50,9 +53,14 @@ const showPopup = () => {
   color: #3C3B6E;
 }
 
+.portrait {
+  max-width: 200px;
+}
+
 </style>
 
 <div in:fade on:click={showPopup} class={`container ${term.party.toLowerCase()}`}>
+  <img class="portrait" src={`https://theunitedstates.io/images/congress/original/${id.bioguide}.jpg`} alt={name.official_full || `${name.first} ${name.last}`} />
   <h2>{name.official_full || `${name.first} ${name.last}`}</h2>
   <h3>{term.party}</h3>
 </div>

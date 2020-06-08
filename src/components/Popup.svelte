@@ -3,7 +3,9 @@
 
   export let data;
 
-  const { id, social, term } = data;
+  const {
+    id, social, term, name,
+} = data;
   const title = term.type === 'sen' ? 'Senator' : 'Representative';
   const districtInfo = term.type === 'sen' ? '' : `, District ${term.district + 1}`;
   const { phone, office, contact_form } = term;
@@ -39,10 +41,14 @@
   color: white;
 }
 
+.portrait {
+  max-width: 200px;
+}
 </style>
 
 <h2>{data.name.official_full}</h2>
-<h3>{term.party} {title}{districtInfo}</h3>
+<img class="portrait" src={`https://theunitedstates.io/images/congress/original/${id.bioguide}.jpg`} alt={name.official_full || `${name.first} ${name.last}`} />
+<h3>{term.party} - {title}{districtInfo}</h3>
 
 <p><strong>Phone:</strong> <a href={`tel:${phone}`}>{phone}</a></p>
 <p><strong>Office:</strong> {office}</p>
