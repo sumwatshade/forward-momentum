@@ -1,27 +1,43 @@
+<script>
+    import {states} from './representatives/state/[state].json.js';
+    let state = 'ca';
+</script>
+
 <style>
-	h1 {
-		text-align: center;
-		margin: 0 auto;
-	}
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 10px;
+}
 
-	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
-	}
+.state {
+    border: 1px solid black;
+    border-radius: 3px;
+    
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    margin: 20px;
+    padding: 20px;
+    font-size: 2rem;
+}
 
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
-	}
 </style>
 
-<svelte:head>
-	<title>Forward Momentum</title>
-</svelte:head>
+<div class="container">
+	<h1>Represent US</h1>
+	<p>Get more info on the members of Congress that represent you.</p>
+    <h2>Select your state</h2>
+    <div class="grid">
+	{#each states as state}
+		<!-- we're using the non-standard `rel=prefetch` attribute to
+				tell Sapper to load the data for the page as soon as
+				the user hovers over the link or taps it, instead of
+				waiting for the 'click' event -->
+		<div class='state'>
+            <a rel='prefetch' href='representatives/{state}'>{state.toUpperCase()}</a>
+        </div>
+	{/each}
+    </div>    
+</div>
 
-<h1>Connect with your government representatives</h1>
-<h2>Use your voice to make a difference</h2>
-<a href="representatives">Let's get started</a>
