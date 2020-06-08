@@ -1,7 +1,11 @@
 <script>
 	import Nav from '../components/Nav.svelte';
-
+    import GoogleAnalytics from "sapper-google-analytics/GoogleAnalytics.svelte"
+	import { stores } from "@sapper/app"
+	
 	export let segment;
+	let ga_measurment_id = 'UA-161523112-2'
+
 </script>
 
 <style>
@@ -17,6 +21,7 @@
 </style>
 
 <Nav {segment}/>
+<GoogleAnalytics {stores} id={ga_measurment_id}/>
 
 <main>
 	<slot></slot>
