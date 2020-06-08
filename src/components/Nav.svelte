@@ -33,7 +33,8 @@
 <style>
 
 nav {
-  background-color: #3C3B6E;
+  background: rgb(60,59,110);
+  background: linear-gradient(315deg, rgba(60,59,110,1) 0%, rgba(178,34,52,1) 100%);
   height: 60px;
   font-size: 1em;
 }
@@ -117,12 +118,14 @@ nav {
 }
 
 .navbar-list.mobile {
-  background-color: rgba(0, 0, 0, 0.8);
+  background: rgb(60,59,110);
+  background: linear-gradient(315deg,rgba(178,34,52,0.2) 0%,  rgba(60,59,110,0.9) 100%);
   position: fixed;
   display: block;
-  height: calc(100% - 45px);
+  height: calc(100% - 60px);
   bottom: 0;
   left: 0;
+  font-size: 1.5em;
 }
 
 .navbar-list li {
