@@ -58,9 +58,9 @@
 </style>
 
 <div class="container">
-	<h1>Represent US</h1>
+	<h1>Who are my representatives?</h1>
 	<p>Get more info on the members of Congress that represent you.</p>
-    <h2>Select your state</h2>
+    <h2>Select your state code from the grid below:</h2>
     <div class="grid">
 	{#each states as state}
 		<!-- we're using the non-standard `rel=prefetch` attribute to
