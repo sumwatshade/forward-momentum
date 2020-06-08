@@ -121,16 +121,22 @@ nav {
 
 .navbar-list.mobile {
   background: rgb(60,59,110);
-  background: linear-gradient(315deg,rgba(178,34,52,0.2) 0%,  rgba(60,59,110,0.9) 100%);
+  background: linear-gradient(45deg,rgba(178,34,52,0.8) 0%,  rgba(60,59,110,1) 100%);
   position: fixed;
   display: block;
-  height: calc(100% - 60px);
+  height: calc(100% - 59px);
   bottom: 0;
   left: 0;
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 .navbar-list li {
+  list-style-type: none;
+  position: relative;
+}
+
+.navbar-list.mobile li {
+  margin-top: 30px;
   list-style-type: none;
   position: relative;
 }
