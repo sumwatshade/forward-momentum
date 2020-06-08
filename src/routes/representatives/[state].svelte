@@ -35,8 +35,8 @@
 
 <style>
 .grid {
-  display: grid;
-  grid-template-columns: auto auto auto;
+  display: flex;
+  flex-wrap: wrap;
   padding: 10px;
 }
 
@@ -44,6 +44,7 @@
 
 <svelte:head>
   <title>{state}</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </svelte:head>
 
 <Modal>

@@ -6,11 +6,12 @@
 
 <style>
 	main {
-		position: relative;
-		max-width: 56em;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
 		background-color: white;
 		padding: 2em;
-		margin: 0 auto;
 		box-sizing: border-box;
 	}
 </style>

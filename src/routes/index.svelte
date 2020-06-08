@@ -1,25 +1,37 @@
 <script>
     import {states} from './representatives/state/[state].json.js';
-    let state = 'ca';
+	let state = 'ca';
 </script>
 
 <style>
 .grid {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
+  display: inline-flex;
+  flex-wrap: wrap;
   padding: 10px;
+
+  justify-content: center;
+  align-items: center;
 }
 
 .state {
     border: 1px solid black;
     border-radius: 3px;
     
+	width: 50px;
+	height: 50px;
+
     display: flex;
     flex-direction: column;
     place-items: center;
     margin: 20px;
     padding: 20px;
     font-size: 2rem;
+}
+
+@media (max-width: 620px) {
+	.state {
+		width: 100%;
+	}
 }
 
 </style>

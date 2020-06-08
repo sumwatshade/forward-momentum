@@ -1,8 +1,11 @@
 <script>
   import {onMount} from 'svelte';
+  import SocialMedia from './SocialMedia.svelte';
   export let data;
 
-  const { social } = data;
+  const { social, term } = data;
+  const title = term.type === 'sen' ? 'Senator' : 'Representative';
+  const districtInfo = term.type === 'sen' ? '' : `, District ${term.district}`;
 </script>
 
 <style>
@@ -12,8 +15,5 @@
 </style>
 
 <h2>{data.name.official_full}</h2>
-<ul>
-    {#each Object.keys(social).filter(t => t.indexOf('_id') === -1) as mediaType}
-      <li><strong>{mediaType}:</strong> {social[mediaType]}</li>
-    {/each}
-</ul>
+<h3>{term.party} {title}{districtInfo}</h3>
+<SocialMedia media={social} />

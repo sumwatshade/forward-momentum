@@ -17,8 +17,15 @@
 .container {
   margin: 20px;
   padding: 20px;
+  min-width: 200px;
   border: 1px solid black;
   border-radius: 3px;
+}
+
+@media screen and (max-width: 620px) {
+  .container {
+    width: 100%;
+  }
 }
 
 .republican {
