@@ -47,7 +47,7 @@
 
 @media (max-width: 620px) {
 	.border-wrap {
-		width: 100%;
+		width: 30%;
   }
   
   .state {
