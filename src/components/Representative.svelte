@@ -47,10 +47,12 @@ const showPopup = () => {
 
 .republican {
   color: #B22234;
+  border-color: #B22234;
 }
 
 .democrat {
   color: #3C3B6E;
+  border-color: #3C3B6E;
 }
 
 .portrait {
