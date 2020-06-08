@@ -22,6 +22,7 @@
   text-align: center;
   text-decoration: none;
   margin: 5px 2px;
+  width: 80%;
 }
 
 .fa > span {
@@ -47,7 +48,7 @@
 </style>
 
 <h2>{data.name.official_full}</h2>
-<img class="portrait" src={`https://theunitedstates.io/images/congress/original/${id.bioguide}.jpg`} alt={name.official_full || `${name.first} ${name.last}`} />
+<img class="portrait" loading="lazy" src={`https://theunitedstates.io/images/congress/original/${id.bioguide}.jpg`} alt={name.official_full || `${name.first} ${name.last}`} />
 <h3>{term.party} - {title}{districtInfo}</h3>
 
 <p><strong>Phone:</strong> <a href={`tel:${phone}`}>{phone}</a></p>

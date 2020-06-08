@@ -133,8 +133,11 @@ setContext(key, { open, close });
 
   .content {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 1rem;
-    max-height: calc(100vh - 4rem);
+    max-height: calc(100vh - 8rem);
     overflow: auto;
   }
 
