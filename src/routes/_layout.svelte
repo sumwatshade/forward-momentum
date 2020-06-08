@@ -1,10 +1,10 @@
 <script>
+	import GoogleAnalytics from 'sapper-google-analytics/GoogleAnalytics.svelte';
+	import { stores } from '@sapper/app';
 	import Nav from '../components/Nav.svelte';
-    import GoogleAnalytics from "sapper-google-analytics/GoogleAnalytics.svelte"
-	import { stores } from "@sapper/app"
 	
 	export let segment;
-	let ga_measurment_id = 'UA-161523112-2'
+	const ga_measurment_id = 'UA-161523112-2';
 
 </script>
 

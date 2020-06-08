@@ -1,6 +1,6 @@
 <script>
-  import {onMount} from 'svelte';
   import SocialMedia from './SocialMedia.svelte';
+
   export let data;
 
   const { social, term } = data;

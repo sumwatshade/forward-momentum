@@ -1,18 +1,18 @@
 <script>
 	import { fade } from 'svelte/transition';
 
-  export let rep;
-  
-  import { getContext } from 'svelte';
-  const { open } = getContext('simple-modal');
+import { getContext } from 'svelte';
 
-  import Popup from './Popup.svelte';
+import Popup from './Popup.svelte';
 
-  const {id, name, term} = rep;
+export let rep;
+const { open } = getContext('simple-modal');
 
-  const showPopup = () => {
-		open(Popup, { data: rep });
-  };
+const { name, term } = rep;
+
+const showPopup = () => {
+  open(Popup, { data: rep });
+};
 
 </script>
 

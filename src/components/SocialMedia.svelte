@@ -2,17 +2,15 @@
     export let media;
 
     const map = {
-        twitter: 'https://twitter.com/{{REP_ID}}',
-        facebook: 'https://facebook.com/{{REP_ID}}',
-        youtube: 'https://youtube.com/user/{{REP_ID}}',
-        instagram: 'https://www.instagram.com/{{REP_ID}}/'
-    }
-    const icons = Object.keys(media).filter(m => m.indexOf('_id') === -1 && map[m]).map(type => {
-        return {
-            type,
-            link: map[type].replace('{{REP_ID}}', media[type])
-        }
-    })
+      twitter: 'https://twitter.com/{{REP_ID}}',
+      facebook: 'https://facebook.com/{{REP_ID}}',
+      youtube: 'https://youtube.com/user/{{REP_ID}}',
+      instagram: 'https://www.instagram.com/{{REP_ID}}/',
+    };
+    const icons = Object.keys(media).filter((m) => m.indexOf('_id') === -1 && map[m]).map((type) => ({
+      type,
+      link: map[type].replace('{{REP_ID}}', media[type]),
+    }));
     
 </script>
 

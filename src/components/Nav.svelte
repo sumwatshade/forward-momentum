@@ -1,21 +1,24 @@
 <script>
-  export let segment
-  import { onMount } from "svelte";
+  import { onMount } from 'svelte';
+
+  export let segment;
 
   // Show mobile icon and display menu
   let showMobileMenu = false;
 
   // List of navigation items
   const navItems = [
-    { label: "home", href: ".", ariaCurrent: undefined },
-    { label: "about", href: "about", ariaCurrent: 'about' },
+    { label: 'home', href: '.', ariaCurrent: undefined },
+    { label: 'about', href: 'about', ariaCurrent: 'about' },
   ];
 
   // Mobile menu click event handler
-  const handleMobileIconClick = () => (showMobileMenu = !showMobileMenu);
+  function handleMobileIconClick() {
+    showMobileMenu = !showMobileMenu;
+  }
 
   // Media match query handler
-  const mediaQueryHandler = e => {
+  const mediaQueryHandler = (e) => {
     // Reset mobile state
     if (!e.matches) {
       showMobileMenu = false;
@@ -24,7 +27,7 @@
 
   // Attach media query listener on mount hook
   onMount(() => {
-    const mediaListener = window.matchMedia("(max-width: 767px)");
+    const mediaListener = window.matchMedia('(max-width: 767px)');
 
     mediaListener.addListener(mediaQueryHandler);
   });

@@ -1,100 +1,101 @@
 <script>
-	// Version 0.4.1
-  import { setContext as baseSetContext } from 'svelte';
-  import { fade } from 'svelte/transition';
+import { setContext as baseSetContext } from 'svelte';
+import { fade } from 'svelte/transition';
 
-  export let key = 'simple-modal';
-  export let closeButton = true;
-  export let closeOnEsc = true;
-  export let closeOnOuterClick = true;
-  export let styleBg = { top: 0, left: 0 };
-  export let styleWindow = {};
-  export let styleContent = {};
-  export let setContext = baseSetContext;
-  export let transitionBg = fade;
-  export let transitionBgProps = { duration: 250 };
-  export let transitionWindow = transitionBg;
-  export let transitionWindowProps = transitionBgProps;
+let cssBg; let cssWindow; let cssContent; let currentTransitionBg; let currentTransitionWindow;
 
-  const defaultState = {
-    closeButton,
-    closeOnEsc,
-    closeOnOuterClick,
-    styleBg,
-    styleWindow,
-    styleContent,
-    transitionBg,
-    transitionBgProps,
-    transitionWindow,
-    transitionWindowProps,
-  };
-  let state = { ...defaultState };
+export let key = 'simple-modal';
+export let closeButton = true;
+export let closeOnEsc = true;
+export let closeOnOuterClick = true;
+export let styleBg = { top: 0, left: 0 };
+export let styleWindow = {};
+export let styleContent = {};
+export let setContext = baseSetContext;
+export let transitionBg = fade;
+export let transitionBgProps = { duration: 250 };
+export let transitionWindow = transitionBg;
+export let transitionWindowProps = transitionBgProps;
 
-  let Component = null;
-  let props = null;
+const defaultState = {
+  closeButton,
+  closeOnEsc,
+  closeOnOuterClick,
+  styleBg,
+  styleWindow,
+  styleContent,
+  transitionBg,
+  transitionBgProps,
+  transitionWindow,
+  transitionWindowProps,
+};
+let state = { ...defaultState };
 
-  let background;
-  let wrap;
+let Component = null;
+let props = null;
 
-  const camelCaseToDash = str => str
-    .replace(/([a-zA-Z])(?=[A-Z])/g, '$1-').toLowerCase();
+let background;
+let wrap;
 
-  const toCssString = (props) => Object.keys(props)
-    .reduce((str, key) => `${str}; ${camelCaseToDash(key)}: ${props[key]}`, '');
+const camelCaseToDash = (str) => str
+  .replace(/([a-zA-Z])(?=[A-Z])/g, '$1-').toLowerCase();
 
-  $: cssBg = toCssString(state.styleBg);
-  $: cssWindow = toCssString(state.styleWindow);
-  $: cssContent = toCssString(state.styleContent);
-  $: currentTransitionBg = state.transitionBg;
-  $: currentTransitionWindow = state.transitionWindow;
+const toCssString = (cssProps) => Object.keys(cssProps)
+  .reduce((str, cssKey) => `${str}; ${camelCaseToDash(cssKey)}: ${cssProps[cssKey]}`, '');
 
-  const toVoid = () => {};
-  let onOpen = toVoid;
-  let onClose = toVoid;
-  let onOpened = toVoid;
-  let onClosed = toVoid;
+$: cssBg = toCssString(state.styleBg);
+$: cssWindow = toCssString(state.styleWindow);
+$: cssContent = toCssString(state.styleContent);
+$: currentTransitionBg = state.transitionBg;
+$: currentTransitionWindow = state.transitionWindow;
 
-  const open = (
-    NewComponent,
-    newProps = {},
-    options = {},
-    callback = {}
-  ) => {
-    Component = NewComponent;
-    props = newProps;
-    state = { ...defaultState, ...options };
-    onOpen = callback.onOpen || toVoid;
-    onClose = callback.onClose || toVoid;
-    onOpened = callback.onOpened || toVoid;
-    onClosed = callback.onClosed || toVoid;
-  };
+const toVoid = () => {};
+let onOpen = toVoid;
+let onClose = toVoid;
+let onOpened = toVoid;
+let onClosed = toVoid;
 
-  const close = (callback = {}) => {
-    onClose = callback.onClose || onClose;
-    onClosed = callback.onClosed || onClosed;
-    Component = null;
-    props = null;
-  };
+const open = (
+  NewComponent,
+  newProps = {},
+  options = {},
+  callback = {},
+) => {
+  Component = NewComponent;
+  props = newProps;
+  state = { ...defaultState, ...options };
+  onOpen = callback.onOpen || toVoid;
+  onClose = callback.onClose || toVoid;
+  onOpened = callback.onOpened || toVoid;
+  onClosed = callback.onClosed || toVoid;
+};
 
-  const handleKeyup = (event) => {
-    if (state.closeOnEsc && Component && event.key === 'Escape') {
-      event.preventDefault();
-      close();
-    }
-  };
+const close = (callback = {}) => {
+  onClose = callback.onClose || onClose;
+  onClosed = callback.onClosed || onClosed;
+  Component = null;
+  props = null;
+};
 
-  const handleOuterClick = (event) => {
-    if (
-      state.closeOnOuterClick && (
-        event.target === background || event.target === wrap
-      )
-    ) {
-      event.preventDefault();
-      close();
-    }
-  };
+const handleKeyup = (event) => {
+  if (state.closeOnEsc && Component && event.key === 'Escape') {
+    event.preventDefault();
+    close();
+  }
+};
 
-  setContext(key, { open, close });
+const handleOuterClick = (event) => {
+  if (
+    state.closeOnOuterClick && (
+      event.target === background || event.target === wrap
+    )
+  ) {
+    event.preventDefault();
+    close();
+  }
+};
+
+setContext(key, { open, close });
 </script>
 
 <style>

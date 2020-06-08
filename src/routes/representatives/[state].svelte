@@ -1,35 +1,38 @@
 <script context="module">
-  export async function preload({ params, query }) {
+  export async function preload({ params }) {
     // the `slug` parameter is available because
     // this file is called [slug].svelte
     const res = await this.fetch(`representatives/state/${params.state}.json`);
     const data = await res.json();
 
     if (res.status === 200) {
-      return { 
+      return {
         reps: data,
-        state: params.state.toUpperCase() };
-    } else {
-      this.error(res.status, data.message);
+        state: params.state.toUpperCase(),
+      };
     }
+
+    this.error(res.status, data.message);
+    return null;
   }
 </script>
 
 <script>
   import Modal from '../../components/Modal.svelte';
-  import Representative from "../../components/Representative.svelte";
+  import Representative from '../../components/Representative.svelte';
+
   export let reps;
   export let state;
 
   const senate = [];
-  const house = reps.filter(rep => {
-    if(rep.term.type === 'sen') {
+  const house = reps.filter((rep) => {
+    if (rep.term.type === 'sen') {
       senate.push(rep);
       return false;
     }
 
     return true;
-  })
+  });
   
 </script>
 
