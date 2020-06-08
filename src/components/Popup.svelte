@@ -45,14 +45,29 @@
 .portrait {
   max-width: 200px;
 }
+
+.basic-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 20px 0;
+}
+
+.basic-info p {
+  margin: 0 0 0.5em 0;
+}
+
 </style>
 
 <h2>{data.name.official_full}</h2>
 <img class="portrait" loading="lazy" src={`https://theunitedstates.io/images/congress/original/${id.bioguide}.jpg`} alt={name.official_full || `${name.first} ${name.last}`} />
-<h3>{term.party} - {title}{districtInfo}</h3>
 
-<p><strong>Phone:</strong> <a href={`tel:${phone}`}>{phone}</a></p>
-<p><strong>Office:</strong> {office}</p>
+<div class="basic-info">
+  <h3>{term.party} - {title}{districtInfo}</h3>
+  <p><strong>Phone:</strong> <a href={`tel:${phone}`}>{phone}</a></p>
+  <p><strong>Office:</strong> {office}</p>
+</div>
 
 
 {#if contact_form}
@@ -62,10 +77,10 @@
   <a class="red fa fa-check-square-o" target='_blank' rel='noopener noreferer' href={`https://justfacts.votesmart.org/candidate/key-votes/${id.votesmart}`}>&nbsp;<span>View on VoteSmart</span></a>
 {/if}
 {#if id.fec.length}
-  <a class="blue fa fa-list-alt" target='_blank' rel='noopener noreferer' href={`https://www.fec.gov/data/candidates?${id.fec.map((q) => `q=${q}`).join('&')}`}>&nbsp;<span>View campaign info</span></a>
+  <a class="blue fa fa-usd" target='_blank' rel='noopener noreferer' href={`https://www.fec.gov/data/candidates?${id.fec.map((q) => `q=${q}`).join('&')}`}>&nbsp;<span>View campaign info</span></a>
 {/if}
 {#if id.govtrack}
-  <a class="red fa fa-list-alt" target='_blank' rel='noopener noreferer' href={`https://www.govtrack.us/congress/members/${id.govtrack}`}>&nbsp;<span>GovTrack</span></a>
+  <a class="red fa fa-bar-chart-o" target='_blank' rel='noopener noreferer' href={`https://www.govtrack.us/congress/members/${id.govtrack}`}>&nbsp;<span>GovTrack</span></a>
 {/if}
 
 <SocialMedia media={social} />
