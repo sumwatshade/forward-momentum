@@ -10,6 +10,9 @@ const { open } = getContext('simple-modal');
 
 const { name, term, id } = rep;
 
+const title = term.type === 'sen' ? 'Senator' : 'Representative';
+const districtInfo = term.type === 'sen' ? '' : `, District ${term.district + 1}`;
+
 const showPopup = () => {
   open(Popup, { data: rep });
 };
@@ -64,5 +67,6 @@ const showPopup = () => {
 <div in:fade on:click={showPopup} class={`container ${term.party.toLowerCase()}`}>
   <img class="portrait" loading="lazy" src={`https://theunitedstates.io/images/congress/225x275/${id.bioguide}.jpg`} alt={name.official_full || `${name.first} ${name.last}`} />
   <h2>{name.official_full || `${name.first} ${name.last}`}</h2>
-  <h3>{term.party}</h3>
+  <h3>{title}{districtInfo}</h3>
+  <h4>{term.party}</h4>
 </div>

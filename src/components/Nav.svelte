@@ -10,6 +10,7 @@
   const navItems = [
     { label: 'home', href: '.', ariaCurrent: undefined },
     { label: 'about', href: 'about', ariaCurrent: 'about' },
+    { label: 'district map', href: 'district-map', ariaCurrent: 'district-map' },
   ];
 
   // Mobile menu click event handler

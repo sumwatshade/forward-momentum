@@ -1,9 +1,16 @@
 <script>
     import { fade } from 'svelte/transition';
+    import { goto } from '@sapper/app';
     import { states } from './representatives/state/[state].json';
 
     function getRatio(state) {
       return parseInt((100.0 * state.numRep) / (state.numRep + state.numDem), 10);
+    }
+
+    function onClick(state) {
+      return async function () {
+        await goto(`representatives/${state.id}`);
+      };
     }
 </script>
 
@@ -86,7 +93,7 @@
 		<div in:fade class={'border-wrap'} style={`
       background: linear-gradient(315deg,rgba(178,34,52,1) 0%, rgba(178,34,52,1) ${getRatio(state) - 1}%, rgba(60,59,110,1) ${getRatio(state) + 1}%,  rgba(60,59,110,1) 100%)
     `}>
-      <div class={`state ${state.numDem > state.numRep ? 'dem' : 'rep'}`}>
+      <div class={`state ${state.numDem > state.numRep ? 'dem' : 'rep'}`} on:click={onClick(state)}>
           <a rel='prefetch' href='representatives/{state.id}'>{state.id.toUpperCase()}</a>
           <div class="num-dem dem">{state.numDem}</div>
           <div class="num-rep rep">{state.numRep}</div>
