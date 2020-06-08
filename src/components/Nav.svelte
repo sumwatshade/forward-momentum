@@ -181,7 +181,7 @@ nav {
     <ul class={`navbar-list${showMobileMenu ? ' mobile' : ''}`}>
       {#each navItems as item}
         <li>
-          <a aria-current="{segment === item.ariaCurrent ? 'page' : undefined}" href={item.href}>{item.label}</a>
+          <a on:click={showMobileMenu ? handleMobileIconClick : ''} aria-current="{segment === item.ariaCurrent ? 'page' : undefined}" href={item.href}>{item.label}</a>
         </li>
       {/each}
     </ul>
