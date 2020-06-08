@@ -7,7 +7,7 @@
     id, social, term, name,
 } = data;
   const title = term.type === 'sen' ? 'Senator' : 'Representative';
-  const districtInfo = term.type === 'sen' ? '' : `, District ${term.district + 1}`;
+  const districtInfo = term.type === 'sen' ? '' : `, District ${term.district}`;
   const { phone, office, contact_form } = term;
 </script>
 

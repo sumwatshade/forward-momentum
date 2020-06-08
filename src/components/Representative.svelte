@@ -11,7 +11,7 @@ const { open } = getContext('simple-modal');
 const { name, term, id } = rep;
 
 const title = term.type === 'sen' ? 'Senator' : 'Representative';
-const districtInfo = term.type === 'sen' ? '' : `, District ${term.district + 1}`;
+const districtInfo = term.type === 'sen' ? '' : `, District ${term.district}`;
 
 const showPopup = () => {
   open(Popup, { data: rep });

@@ -32,7 +32,7 @@
     }
 
     return true;
-  });
+  }).sort((a, b) => a.term.district - b.term.district);
   
 </script>
 
