@@ -1,4 +1,6 @@
 <script>
+	import { fly } from 'svelte/transition';
+
   export let rep;
   
   import { getContext } from 'svelte';
@@ -10,7 +12,14 @@
 
   const showPopup = () => {
 		open(Popup, { data: rep });
-	};
+  };
+  
+  let visible = false;
+
+  setTimeout(() => {
+    visible = true;
+  }, Math.random() * 1000);
+
 </script>
 
 <style>
@@ -38,7 +47,9 @@
 
 </style>
 
-<div on:click={showPopup} class={`container ${term.party.toLowerCase()}`}>
+{#if visible}
+<div in:fly on:click={showPopup} class={`container ${term.party.toLowerCase()}`}>
   <h2>{name.official_full || `${name.first} ${name.last}`}</h2>
   <h3>{term.party}</h3>
 </div>
+{/if}
