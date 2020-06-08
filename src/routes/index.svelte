@@ -1,4 +1,6 @@
 <script>
+    import { fade } from 'svelte/transition';
+
     import {states} from './representatives/state/[state].json.js';
 	let state = 'ca';
 </script>
@@ -46,7 +48,7 @@
 				tell Sapper to load the data for the page as soon as
 				the user hovers over the link or taps it, instead of
 				waiting for the 'click' event -->
-		<div class='state'>
+		<div in:fade class='state'>
             <a rel='prefetch' href='representatives/{state}'>{state.toUpperCase()}</a>
         </div>
 	{/each}

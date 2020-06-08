@@ -1,5 +1,5 @@
 <script>
-	import { fly } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
 
   export let rep;
   
@@ -13,17 +13,22 @@
   const showPopup = () => {
 		open(Popup, { data: rep });
   };
-  
-  let visible = false;
-
-  setTimeout(() => {
-    visible = true;
-  }, Math.random() * 1000);
 
 </script>
 
 <style>
 .container {
+  margin: 20px;
+  padding: 20px;
+  min-width: 200px;
+  border: 1px solid black;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+
+}
+
+.container:hover {
+  background-color: #bfbfbf;
   margin: 20px;
   padding: 20px;
   min-width: 200px;
@@ -47,9 +52,7 @@
 
 </style>
 
-{#if visible}
-<div in:fly on:click={showPopup} class={`container ${term.party.toLowerCase()}`}>
+<div in:fade on:click={showPopup} class={`container ${term.party.toLowerCase()}`}>
   <h2>{name.official_full || `${name.first} ${name.last}`}</h2>
   <h3>{term.party}</h3>
 </div>
-{/if}
