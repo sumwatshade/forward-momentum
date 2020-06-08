@@ -1,11 +1,6 @@
 <script>
-    import {states} from './[state].json.js';
+    import {states} from './state/[state].json.js';
     let state = 'ca';
-function onClick(event) {
-    if(!event.key || event.key === 'Enter') {
-        window.location = `/representatives/${state}`;
-    }
-}
 </script>
 
 <style>
@@ -29,7 +24,7 @@ function onClick(event) {
 
 </style>
 
-<div class="container" on:keydown={onClick}>
+<div class="container">
     <h1>Select Your state</h1>
     <div class="grid">
 	{#each states as state}

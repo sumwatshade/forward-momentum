@@ -2,11 +2,13 @@
   export async function preload({ params, query }) {
     // the `slug` parameter is available because
     // this file is called [slug].svelte
-    const res = await this.fetch(`representatives/${params.state}.json`);
+    const res = await this.fetch(`representatives/state/${params.state}.json`);
     const data = await res.json();
 
     if (res.status === 200) {
-      return { reps: data };
+      return { 
+        reps: data,
+        state: params.state.toUpperCase() };
     } else {
       this.error(res.status, data.message);
     }
@@ -15,8 +17,8 @@
 
 <script>
   import Representative from "../../components/Representative.svelte";
-  import Modal from "../../components/Modal.svelte";
   export let reps;
+  export let state;
 
   const senate = [];
   const house = reps.filter(rep => {
@@ -40,10 +42,9 @@
 </style>
 
 <svelte:head>
-  <title>California</title>
+  <title>{state}</title>
 </svelte:head>
 
-<Modal>
   <h1>US Senate ({senate.length})</h1>
   <div class="grid">
     {#each senate as rep}
@@ -65,4 +66,3 @@
       <Representative {rep} />
     {/each}
   </div>
-</Modal>

@@ -2,18 +2,19 @@ import congressData from 'congress-legislators/legislators-current.yaml';
 
 const lookup = new Map();
 congressData.forEach((legislator, index) => {
-    const { id: { bioguide } } = legislator;
-    legislator.term = legislator.terms[legislator.terms.length - 1];
-    delete legislator.terms;
+    const curr = { ...legislator };
+    const { id: { bioguide } } = curr;
+    curr.term = curr.terms[curr.terms.length - 1];
+    delete curr.terms;
 
-    const state = legislator.term.state.toLowerCase();
+    const state = curr.term.state.toLowerCase();
 
 
     const prevLookup = lookup.get(state);
     if (!prevLookup || !Array.isArray(prevLookup)) {
-        lookup.set(state, [legislator])
+        lookup.set(state, [curr])
     } else {
-        lookup.set(state, [...prevLookup, legislator]);
+        lookup.set(state, [...prevLookup, curr]);
     }
 });
 
