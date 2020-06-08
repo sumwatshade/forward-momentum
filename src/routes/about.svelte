@@ -11,4 +11,4 @@
 information about your state representatives. We will
 be working hard to produce easy methods to contact your
 representatives, and any resources needed to make your
-voice heard</p>
+voice heard.</p>
