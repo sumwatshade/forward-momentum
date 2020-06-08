@@ -1,6 +1,10 @@
 <script>
     import { fade } from 'svelte/transition';
     import { states } from './representatives/state/[state].json';
+
+    function getRatio(state) {
+      return parseInt((100.0 * state.numRep) / (state.numRep + state.numDem), 10);
+    }
 </script>
 
 <style>
@@ -14,15 +18,20 @@
 }
 
 .state {
+  position: relative;
   border: 1px solid black;
   border-radius: 3px;
     
-	width: 50px;
-	height: 50px;
+  min-width: 60px;
+	min-height: 60px;
+  max-width: 100px;
+	max-height: 100px;
+
 
   display: flex;
   flex-direction: column;
-  place-items: center;
+  justify-content: center;
+  align-items: center;  
   padding: 20px;
   font-size: 2rem;
 
@@ -41,18 +50,25 @@
 
 .border-wrap {
   display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 3px;
   margin: 20px;
 }
 
-@media (max-width: 620px) {
-	.border-wrap {
-		width: 30%;
-  }
-  
-  .state {
-    width: 100%;
-  }
+.num-rep {
+  position: absolute;
+  align-self: flex-end;
+  bottom: 3px;
+  right: 6px;
+  font-size: 0.7em;
+}
+
+.num-dem {
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  font-size: 0.7em;
 }
 
 </style>
@@ -68,10 +84,12 @@
 				the user hovers over the link or taps it, instead of
 				waiting for the 'click' event -->
 		<div in:fade class={'border-wrap'} style={`
-      background: linear-gradient(315deg,rgba(178,34,52,1) 0%, rgba(178,34,52,1) ${parseInt((100.0 * state.numRep) / (state.numRep + state.numDem), 10)}%,  rgba(60,59,110,1) 100%)
+      background: linear-gradient(315deg,rgba(178,34,52,1) 0%, rgba(178,34,52,1) ${getRatio(state) - 1}%, rgba(60,59,110,1) ${getRatio(state) + 1}%,  rgba(60,59,110,1) 100%)
     `}>
       <div class={`state ${state.numDem > state.numRep ? 'dem' : 'rep'}`}>
           <a rel='prefetch' href='representatives/{state.id}'>{state.id.toUpperCase()}</a>
+          <div class="num-dem dem">{state.numDem}</div>
+          <div class="num-rep rep">{state.numRep}</div>
       </div>
     </div>
 	{/each}
