@@ -31,6 +31,21 @@ export const states = Array.from(lookup.keys()).sort((a,b) => {
         return 0;
     }
     return a > b ? 1 : -1;
+}).map(state => {
+    const reps = lookup.get(state);
+    let numDem = 0;
+    reps.forEach(r => {
+        if(r.term.party === 'Democrat') {
+            numDem += 1;
+        }
+    })
+    const numRep = reps.length - numDem;
+
+    return {
+        id: state,
+        numDem,
+        numRep
+    }
 });
 
 export function get(req, res, next) {

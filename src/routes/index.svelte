@@ -30,6 +30,16 @@
     font-size: 2rem;
 }
 
+.rep {
+  color: #B22234;
+  border-color: #B22234;
+}
+
+.dem {
+  color: #3C3B6E;
+  border-color: #3C3B6E;
+}
+
 @media (max-width: 620px) {
 	.state {
 		width: 100%;
@@ -48,8 +58,8 @@
 				tell Sapper to load the data for the page as soon as
 				the user hovers over the link or taps it, instead of
 				waiting for the 'click' event -->
-		<div in:fade class='state'>
-            <a rel='prefetch' href='representatives/{state}'>{state.toUpperCase()}</a>
+		<div in:fade class={`state ${state.numDem > state.numRep ? 'dem' : 'rep'}`}>
+            <a rel='prefetch' href='representatives/{state.id}'>{state.id.toUpperCase()}</a>
         </div>
 	{/each}
     </div>    
