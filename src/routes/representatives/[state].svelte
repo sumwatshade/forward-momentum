@@ -16,6 +16,7 @@
 </script>
 
 <script>
+  import Modal from '../../components/Modal.svelte';
   import Representative from "../../components/Representative.svelte";
   export let reps;
   export let state;
@@ -45,6 +46,7 @@
   <title>{state}</title>
 </svelte:head>
 
+<Modal>
   <h1>US Senate ({senate.length})</h1>
   <div class="grid">
     {#each senate as rep}
@@ -66,3 +68,4 @@
       <Representative {rep} />
     {/each}
   </div>
+</Modal>

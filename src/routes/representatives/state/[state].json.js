@@ -1,10 +1,18 @@
 import congressData from 'congress-legislators/legislators-current.yaml';
+import socialData from "congress-legislators/legislators-social-media.yaml";
+
+const socialLookup = new Map();
+socialData.forEach(social => {
+    socialLookup.set(social.id.bioguide, social.social)
+});
 
 const lookup = new Map();
 congressData.forEach((legislator, index) => {
     const curr = { ...legislator };
     const { id: { bioguide } } = curr;
+
     curr.term = curr.terms[curr.terms.length - 1];
+    curr.social = socialLookup.get(bioguide)
     delete curr.terms;
 
     const state = curr.term.state.toLowerCase();
