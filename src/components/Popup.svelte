@@ -15,8 +15,8 @@
   h2 {
 		font-size: 2rem;
   }
-  
 .fa {
+  display: block;
   padding: 20px;
   font-size: 20px;
   text-align: center;
@@ -65,7 +65,7 @@
 
 <div class="basic-info">
   <h3>{term.party} - {title}{districtInfo}</h3>
-  <p><strong>Phone:</strong> <a href={`tel:${phone}`}>{phone}</a></p>
+  <p><strong>Phone:</strong> <a class="phone" href={`tel:${phone}`}>{phone}</a></p>
   <p><strong>Office:</strong> {office}</p>
 </div>
 
