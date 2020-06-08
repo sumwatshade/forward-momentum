@@ -1764,8 +1764,8 @@ safe-buffer@5.1.2, safe-buffer@~5.1.1:
 
 sapper-google-analytics@^1.0.1:
   version "1.0.1"
-  resolved "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/sapper-google-analytics/-/sapper-google-analytics-1.0.1.tgz#21ef9a488672c9c01372a6ad9e7a516598af7a00"
-  integrity sha1-Ie+aSIZyycATcqatnnpRZZivegA=
+  resolved "https://registry.yarnpkg.com/sapper-google-analytics/-/sapper-google-analytics-1.0.1.tgz#21ef9a488672c9c01372a6ad9e7a516598af7a00"
+  integrity sha512-BC1a5TbKs4trx7mj55QTOTDppJFfUV9nc9vJ8vulEwpGwRxSaQR5rnASf+4EiDOQLT6ndWrKuepgZQz+xgQvFw==
 
 sapper@^0.27.0:
   version "0.27.13"
