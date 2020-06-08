@@ -26,6 +26,7 @@
 
 .state {
   position: relative;
+  z-index: 9;
   border: 1px solid black;
   border-radius: 3px;
     
@@ -43,6 +44,12 @@
   font-size: 2rem;
 
   background: #ffffff;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.state:hover {
+  opacity: 0.5;
 }
 
 .rep {
@@ -57,10 +64,13 @@
 
 .border-wrap {
   display: flex;
+  z-index: 8;
   justify-content: center;
   align-items: center;
   padding: 3px;
   margin: 20px;
+}
+.border-wrap:hover {
 }
 
 .num-rep {

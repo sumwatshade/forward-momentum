@@ -121,6 +121,7 @@ nav {
 }
 
 .navbar-list.mobile {
+  z-index: 10;
   background: rgb(60,59,110);
   background: linear-gradient(45deg,rgba(178,34,52,0.8) 0%,  rgba(60,59,110,1) 100%);
   position: fixed;
