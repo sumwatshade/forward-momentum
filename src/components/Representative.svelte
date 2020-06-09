@@ -41,7 +41,7 @@ export const showPopup = () => {
   border-radius: 3px;
 }
 
-@media screen and (max-width: 620px) {
+@media(max-width: 620px) {
   .container {
     width: 100%;
   }

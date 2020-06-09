@@ -56,11 +56,14 @@
 }
 
 .basic-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
+  display: block;
   margin: 20px 0;
+  width: 80%;
+
+  border: 1px solid #B22234;
+  color: #3C3B6E; 
+  border-radius: 3px;
+  padding: 20px;
 }
 
 .basic-info p {
@@ -78,6 +81,7 @@
     alt={fullName} 
     onerror="this.onerror=null;this.src='default.png';"/>
 </div>
+
 <div class="basic-info">
   <h3>{term.party} - {title}{districtInfo}</h3>
   <p><strong>Phone:</strong> <a class="phone" href={`tel:${phone}`}>{phone}</a></p>
