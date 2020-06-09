@@ -6,6 +6,7 @@ import { getContext } from 'svelte';
 import Popup from './Popup.svelte';
 
 export let rep;
+
 const { open } = getContext('simple-modal');
 
 const { name, term, id } = rep;
@@ -13,7 +14,7 @@ const { name, term, id } = rep;
 const title = term.type === 'sen' ? 'Senator' : 'Representative';
 const districtInfo = term.type === 'sen' ? '' : `, District ${term.district}`;
 
-const showPopup = () => {
+export const showPopup = () => {
   open(Popup, { data: rep });
 };
 

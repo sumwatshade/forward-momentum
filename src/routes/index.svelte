@@ -70,8 +70,6 @@
   padding: 3px;
   margin: 20px;
 }
-.border-wrap:hover {
-}
 
 .num-rep {
   position: absolute;
@@ -93,6 +91,7 @@
 <div class="container">
 	<h1>Who are my representatives?</h1>
 	<p>Get more info on the members of Congress that represent you.</p>
+	<p>Don't know your district? Check out our <a href="district-map">district map</a>!</p>
     <h2>Select your state code from the grid below:</h2>
     <div class="grid">
 	{#each states as state}

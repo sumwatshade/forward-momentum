@@ -1,14 +1,14 @@
 <script context="module">
   export async function preload({ params }) {
-    // the `slug` parameter is available because
-    // this file is called [slug].svelte
-    const res = await this.fetch(`representatives/state/${params.state}.json`);
+    const [state, district] = params.state;
+    const res = await this.fetch(`representatives/state/${state}.json`);
     const data = await res.json();
 
     if (res.status === 200) {
       return {
         reps: data,
-        state: params.state.toUpperCase(),
+        state: state.toUpperCase(),
+        district,
       };
     }
 
@@ -18,12 +18,16 @@
 </script>
 
 <script>
-  import Modal from '../../components/Modal.svelte';
-  import Representative from '../../components/Representative.svelte';
+  import { onMount } from 'svelte';
+import Modal from '../../components/Modal.svelte';
+import Representative from '../../components/Representative.svelte';
+
 
   export let reps;
   export let state;
+  export let district;
 
+  const houseRefs = {};
   const senate = [];
   const house = reps.filter((rep) => {
     if (rep.term.type === 'sen') {
@@ -34,6 +38,12 @@
     return true;
   }).sort((a, b) => a.term.district - b.term.district);
   
+  onMount(() => {
+    if (district) {
+      console.log(houseRefs[district]);
+      houseRefs[district].showPopup();
+    }
+  });
 </script>
 
 <style>
@@ -72,7 +82,7 @@
                 tell Sapper to load the data for the page as soon as
                 the user hovers over the link or taps it, instead of
                 waiting for the 'click' event -->
-        <Representative {rep} />
+        <Representative {rep} bind:this={houseRefs[rep.term.district]}/>
       {/each}
     </div>
   {/if}
