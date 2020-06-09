@@ -28,6 +28,9 @@ aliases:
   - &build
     name: Building Project
     command: yarn build
+  - &export
+    name: Export Project
+    command: yarn export
 jobs:
   build:
     docker:
@@ -110,7 +113,7 @@ jobs:
           <<: *cache-defaults
       - run: *yarn
       - save_cache: *cache-modules
-      - run: *build
+      - run: *export
       - run:
           name: Assume Github Role
           command: 'git config --global user.email "lshadler13@gmail.com" && git config --global user.name "lshadler"'
