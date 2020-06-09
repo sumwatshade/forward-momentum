@@ -55,7 +55,6 @@ jobs:
           <<: *cache-defaults
       - run: *yarn
       - save_cache: *cache-modules
-      - run: *build
       - run:
           name: Lint
           command: yarn lint
@@ -69,7 +68,6 @@ jobs:
           <<: *cache-defaults
       - run: *yarn
       - save_cache: *cache-modules
-      - run: *build
       - run:
           name: Jest Testing
           command: yarn test --ci
@@ -93,7 +91,6 @@ jobs:
       - run: *yarn
       - save_cache: *cache-modules
       - save_cache: *cache-cypress-modules
-      - run: *build
       - run:
           name: Cypress Testing
           command: yarn test:e2e:ci
