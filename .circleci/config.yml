@@ -119,44 +119,19 @@ workflows:
   version: 2
   commit-workflow:
     jobs:
-      - build:
-          filters:
-            branches:
-              ignore:
-                - gh-pages
+      - build
       - test-unit:
           requires:
             - build
-          filters:
-            branches:
-              ignore:
-                - gh-pages
       - lint:
           requires:
             - build
-          filters:
-            branches:
-              ignore:
-                - gh-pages
       - test-integration:
           requires:
             - build
-          filters:
-            branches:
-              ignore:
-                - gh-pages
       - release:
           requires:
             - build
             - test-unit
             - test-integration
             - lint
-          filters:
-            branches:
-              only:
-                - master
-                - alpha
-                - beta
-                - next
-              ignore:
-                - gh-pages

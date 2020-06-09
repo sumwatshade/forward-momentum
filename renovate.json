@@ -1,0 +1,32 @@
+{
+  "extends": [
+      "config:base"
+  ],
+  "patch": {
+    "labels": ["automerge", "patch-dependency-update"]
+  },
+  "minor": {
+    "labels": ["minor-dependency-update"]
+  },
+  "major": {
+    "labels": ["major-dependency-update"]
+  },
+  "digest": {
+    "labels": ["digest", "automerge", "dependency-update"]
+  },
+  "packageRules": [
+    {
+      "packagePatterns": ["auto", "@auto-it"],
+      "groupName": "auto-monorepo"
+    },
+    {
+      "minor": {
+        "automerge": true,
+        "labels": ["automerge", "minor-dependency-update", "dev-dependency"]
+      },
+      "depTypeList": ["devDependencies"],
+      "branchPrefix": "dev-dependency-renovate/",
+      "labels": ["dev-dependency"]
+    }
+  ]
+}
