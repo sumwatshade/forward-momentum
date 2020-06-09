@@ -1,23 +1,17 @@
 <script>
-	import { fade } from 'svelte/transition';
-
+import { fade } from 'svelte/transition';
 import { getContext } from 'svelte';
-
-import Popup from './Popup.svelte';
+import RepInfo from './RepInfo.svelte';
 
 export let rep;
-
 const { open } = getContext('simple-modal');
-
 const { name, term, id } = rep;
-
 const title = term.type === 'sen' ? 'Senator' : 'Representative';
 const districtInfo = term.type === 'sen' ? '' : `, District ${term.district}`;
 
 export const showPopup = () => {
-  open(Popup, { data: rep });
+  open(RepInfo, { data: rep });
 };
-
 </script>
 
 <style>
@@ -29,7 +23,6 @@ export const showPopup = () => {
   border: 1px solid black;
   border-radius: 3px;
   transition: background-color 0.3s;
-
 }
 
 .container:hover {
