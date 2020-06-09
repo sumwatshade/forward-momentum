@@ -127,13 +127,6 @@ workflows:
             branches:
               ignore:
                 - gh-pages
-      - type-check:
-          requires:
-            - build
-          filters:
-            branches:
-              ignore:
-                - gh-pages
       - test-unit:
           requires:
             - build
@@ -160,7 +153,6 @@ workflows:
             - build
             - test-unit
             - test-integration
-            - type-check
             - lint
           filters:
             branches:
