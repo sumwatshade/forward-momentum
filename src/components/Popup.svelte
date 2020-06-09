@@ -43,7 +43,14 @@
 }
 
 .portrait {
-  max-width: 200px;
+  width: 225px;
+  height: 275px;
+  margin-bottom: 20px;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
 }
 
 .basic-info {
@@ -61,8 +68,14 @@
 </style>
 
 <h2>{data.name.official_full}</h2>
-<img class="portrait" loading="lazy" src={`https://theunitedstates.io/images/congress/225x275/${id.bioguide}.jpg`} alt={name.official_full || `${name.first} ${name.last}`} />
-
+<div class="portrait">
+  <img 
+    class="image" 
+    loading="lazy" 
+    src={`https://theunitedstates.io/images/congress/225x275/${id.bioguide}.jpg`} 
+    alt={name.official_full || `${name.first} ${name.last}`} 
+    onerror="this.onerror=null;this.src='default.png';"/>
+</div>
 <div class="basic-info">
   <h3>{term.party} - {title}{districtInfo}</h3>
   <p><strong>Phone:</strong> <a class="phone" href={`tel:${phone}`}>{phone}</a></p>

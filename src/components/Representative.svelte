@@ -75,7 +75,12 @@ export const showPopup = () => {
 
 <div in:fade on:click={showPopup} class={`container ${term.party.toLowerCase()}`}>
   <div class="portrait">
-    <img class="image" loading="lazy" src={`https://theunitedstates.io/images/congress/225x275/${id.bioguide}.jpg`} alt={name.official_full || `${name.first} ${name.last}`} onerror="this.onerror=null;this.src='default.png';"/>
+    <img 
+      class="image" 
+      loading="lazy" 
+      src={`https://theunitedstates.io/images/congress/225x275/${id.bioguide}.jpg`} 
+      alt={name.official_full || `${name.first} ${name.last}`} 
+      onerror="this.onerror=null;this.src='default.png';"/>
   </div>
   <h2>{name.official_full || `${name.first} ${name.last}`}</h2>
   <h3>{title}{districtInfo}</h3>
