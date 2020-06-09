@@ -12,10 +12,6 @@ aliases:
     paths: &cache-modules-paths
       - ~/.cache/yarn
       - node_modules
-      # Must cache all monorepo node_modules
-      - packages/client/node_modules
-      - packages/indexer-infra/node_modules
-      - packages/types/node_modules
       # Necessary so that linting is faster on CI
       - .eslintcache
   - &cache-cypress-modules
@@ -100,7 +96,7 @@ jobs:
       - run: *build
       - run:
           name: Cypress Testing
-          command: cd packages/client && yarn test:e2e:ci
+          command: yarn test:e2e:ci
       - store_artifacts:
           path: coverage
   release:
