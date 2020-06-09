@@ -46,6 +46,8 @@
   background: #ffffff;
   opacity: 1;
   transition: opacity 0.3s ease;
+
+  cursor: pointer;
 }
 
 .state:hover {

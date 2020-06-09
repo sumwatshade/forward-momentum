@@ -40,7 +40,6 @@ import Representative from '../../components/Representative.svelte';
   
   onMount(() => {
     if (district) {
-      console.log(houseRefs[district]);
       houseRefs[district].showPopup();
     }
   });

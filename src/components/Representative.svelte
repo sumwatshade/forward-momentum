@@ -60,13 +60,17 @@ export const showPopup = () => {
 }
 
 .portrait {
-  max-width: 200px;
+  width: 225px;
+  height: 275px;
+  margin-bottom: 20px;
 }
 
 </style>
 
 <div in:fade on:click={showPopup} class={`container ${term.party.toLowerCase()}`}>
-  <img class="portrait" loading="lazy" src={`https://theunitedstates.io/images/congress/225x275/${id.bioguide}.jpg`} alt={name.official_full || `${name.first} ${name.last}`} />
+  <div class="portrait">
+    <img loading="lazy" src={`https://theunitedstates.io/images/congress/225x275/${id.bioguide}.jpg`} alt={name.official_full || `${name.first} ${name.last}`} />
+  </div>
   <h2>{name.official_full || `${name.first} ${name.last}`}</h2>
   <h3>{title}{districtInfo}</h3>
   <h4>{term.party}</h4>

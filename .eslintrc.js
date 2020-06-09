@@ -21,6 +21,7 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off',
         'import/prefer-default-export': 'off',
         'no-multiple-empty-lines': 'off',
+        'no-console': 'error',
       },
     },
   ],
