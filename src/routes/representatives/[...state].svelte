@@ -27,6 +27,7 @@ import Representative from '../../components/Representative.svelte';
   export let state;
   export let district;
 
+  let warning = false;
   const houseRefs = {};
   const senate = [];
   const house = reps.filter((rep) => {
@@ -39,8 +40,10 @@ import Representative from '../../components/Representative.svelte';
   }).sort((a, b) => a.term.district - b.term.district);
   
   onMount(() => {
-    if (district) {
+    if (district && houseRefs[district]) {
       houseRefs[district].showPopup();
+    } else {
+      warning = true;
     }
   });
 </script>
@@ -52,6 +55,21 @@ import Representative from '../../components/Representative.svelte';
   padding: 10px;
 }
 
+.warning {
+  border-radius: 3px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  border: 1px solid 	#dab600;
+  background-color: 	#f8ed62;
+  color: #947700;
+  margin-bottom: 20px;
+}
+
+p > a {
+  display: inline;
+}
 </style>
 
 <svelte:head>
@@ -60,6 +78,13 @@ import Representative from '../../components/Representative.svelte';
 </svelte:head>
 
 <Modal>
+  {#if warning}
+  <div class="warning">
+    <p>You requested district {district}, which could not be found. Search for your representative below</p>
+    <a href='district-map'>Click here to go back to the map</a>
+  </div>
+  {/if}
+
   {#if senate.length}
     <h1>US Senate ({senate.length})</h1>
     <div class="grid">

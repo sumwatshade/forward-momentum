@@ -99,7 +99,7 @@ src="https://www.govtrack.us/congress/members/embed/mapframe?&bounds=-158.518,57
 <button 
     on:click|preventDefault={onSubmit} 
     on:keydown|preventDefault={onKeyPress} 
-    disabled={!$districtValidity.valid || !$districtValidity.valid}>Show Representative</button>
+    disabled={!$stateValidity.valid || !$districtValidity.valid}>Show Representative</button>
 </form>
 
 <style>
