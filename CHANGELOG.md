@@ -1,0 +1,70 @@
+# v0.0.1 (Tue Jun 09 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Lucas Shadler ([@lshadler](https://github.com/lshadler)), for all your work!
+
+#### 🐛 Bug Fix
+
+- fix: rename popup ([@lshadler](https://github.com/lshadler))
+- fix: remove typecheck step ([@lshadler](https://github.com/lshadler))
+- fix: add export step ([@lshadler](https://github.com/lshadler))
+- fix: add auto deps ([@lshadler](https://github.com/lshadler))
+- fix: gradient shows more info ([@lshadler](https://github.com/lshadler))
+- fix: simple setup ([@lshadler](https://github.com/lshadler))
+- fix: create basic shell ([@lshadler](https://github.com/lshadler))
+
+#### ⚠️ Pushed to `master`
+
+- easier scroll for mobile ([@lshadler](https://github.com/lshadler))
+- chore: ignore sapper imports ([@lshadler](https://github.com/lshadler))
+- chore: lint cache and release ([@lshadler](https://github.com/lshadler))
+- chore: simple cypress ([@lshadler](https://github.com/lshadler))
+- chore: add cypress ([@lshadler](https://github.com/lshadler))
+- fix mobile flex styling bug ([@lshadler](https://github.com/lshadler))
+- solve error handling bug ([@lshadler](https://github.com/lshadler))
+- helpful warnings ([@lshadler](https://github.com/lshadler))
+- social media ([@lshadler](https://github.com/lshadler))
+- fix image handling ([@lshadler](https://github.com/lshadler))
+- image sizing and handling ([@lshadler](https://github.com/lshadler))
+- consistent styling ([@lshadler](https://github.com/lshadler))
+- allow for representative lookup ([@lshadler](https://github.com/lshadler))
+- sort by district ([@lshadler](https://github.com/lshadler))
+- animation for front page ([@lshadler](https://github.com/lshadler))
+- add district map ([@lshadler](https://github.com/lshadler))
+- add numerical info ([@lshadler](https://github.com/lshadler))
+- fix inline issues ([@lshadler](https://github.com/lshadler))
+- better image handling ([@lshadler](https://github.com/lshadler))
+- cleanup for styling ([@lshadler](https://github.com/lshadler))
+- mobile nav ([@lshadler](https://github.com/lshadler))
+- remove sapper logos ([@lshadler](https://github.com/lshadler))
+- slight text update ([@lshadler](https://github.com/lshadler))
+- border color bonus ([@lshadler](https://github.com/lshadler))
+- chore: no build on lint ([@lshadler](https://github.com/lshadler))
+- lazy load images and mobile friendly strucut ([@lshadler](https://github.com/lshadler))
+- add pictures ([@lshadler](https://github.com/lshadler))
+- add helpful links ([@lshadler](https://github.com/lshadler))
+- linting hooks ([@lshadler](https://github.com/lshadler))
+- linting ([@lshadler](https://github.com/lshadler))
+- cleanup ([@lshadler](https://github.com/lshadler))
+- mobile adjustment ([@lshadler](https://github.com/lshadler))
+- quick improvement of nav ([@lshadler](https://github.com/lshadler))
+- gradients for the win ([@lshadler](https://github.com/lshadler))
+- color scheme alignment ([@lshadler](https://github.com/lshadler))
+- slight color scheme adjustment ([@lshadler](https://github.com/lshadler))
+- use appropriate thing ([@lshadler](https://github.com/lshadler))
+- set registry ([@lshadler](https://github.com/lshadler))
+- google analytics ([@lshadler](https://github.com/lshadler))
+- simple transitions ([@lshadler](https://github.com/lshadler))
+- senator fade in transition ([@lshadler](https://github.com/lshadler))
+- more deets ([@lshadler](https://github.com/lshadler))
+- move index ([@lshadler](https://github.com/lshadler))
+- condense to one api call ([@lshadler](https://github.com/lshadler))
+- remove blog ([@lshadler](https://github.com/lshadler))
+- update ste references ([@lshadler](https://github.com/lshadler))
+- update ([@lshadler](https://github.com/lshadler))
+- initial commit ([@lshadler](https://github.com/lshadler))
+
+#### Authors: 1
+
+- Lucas Shadler ([@lshadler](https://github.com/lshadler))
