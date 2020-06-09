@@ -29,5 +29,6 @@ module.exports = {
   rules: {
     camelcase: 'off',
     'import/no-extraneous-dependencies': 'off',
+    'import/no-unresolved': [2, { ignore: ['^@sapper/*'] }],
   },
 };
