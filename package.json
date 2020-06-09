@@ -10,9 +10,10 @@
     "cy:run": "cypress run",
     "cy:open": "cypress open",
     "test": "echo 'No jest tests yet'",
-    "lint": "eslint --ext .js --ext .svelte src",
+    "lint": "eslint --ext .js --ext .svelte src cypress --cache=true",
     "test:e2e": "run-p --race dev cy:open",
-    "test:e2e:ci": "run-p --race dev cy:run"
+    "test:e2e:ci": "run-p --race dev cy:run",
+    "release": "auto shipit"
   },
   "dependencies": {
     "compression": "^1.7.1",

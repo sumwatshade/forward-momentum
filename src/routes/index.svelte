@@ -8,7 +8,7 @@
     }
 
     function onClick(state) {
-      return async function () {
+      return async function click() {
         await goto(`representatives/${state.id}`);
       };
     }
