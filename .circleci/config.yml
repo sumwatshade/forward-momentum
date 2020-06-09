@@ -1,0 +1,174 @@
+version: 2
+
+cache-defaults: &cache-defaults
+  keys:
+    - oid-v1-{{ arch }}-{{ checksum "yarn.lock" }}
+cache-cypress: &cache-cypress
+  keys:
+    - oid-cypress-v1-{{ arch }}-{{ checksum "yarn.lock" }}
+aliases:
+  - &cache-modules
+    key: oid-v1-{{ arch }}-{{ checksum "yarn.lock" }}
+    paths: &cache-modules-paths
+      - ~/.cache/yarn
+      - node_modules
+      # Must cache all monorepo node_modules
+      - packages/client/node_modules
+      - packages/indexer-infra/node_modules
+      - packages/types/node_modules
+      # Necessary so that linting is faster on CI
+      - .eslintcache
+  - &cache-cypress-modules
+    key: oid-cypress-v1-{{ arch }}-{{ checksum "yarn.lock" }}
+    paths: &cache-cypress-paths
+      - ~/.cache/Cypress
+  - &yarn
+    name: Installing Dependencies
+    command: yarn install --non-interactive --frozen-lockfile --cache-folder ~/.cache/yarn
+  - &build
+    name: Building Project
+    command: yarn build
+jobs:
+  build:
+    docker:
+      - image: circleci/node:dubnium-browsers
+    working_directory: ~/project
+    steps:
+      - checkout
+      - restore_cache:
+          <<: *cache-defaults
+      - restore_cache:
+          <<: *cache-cypress
+      - run: *yarn
+      - run:
+          name: Install cypress
+          command: $(yarn bin)/cypress install
+      - save_cache: *cache-modules
+      - save_cache: *cache-cypress-modules
+      - run: *build
+  lint:
+    docker:
+      - image: circleci/node:dubnium-browsers
+    working_directory: ~/project
+    steps:
+      - checkout
+      - restore_cache:
+          <<: *cache-defaults
+      - run: *yarn
+      - save_cache: *cache-modules
+      - run: *build
+      - run:
+          name: Lint
+          command: yarn lint
+  test-unit:
+    docker:
+      - image: circleci/node:dubnium-browsers
+    working_directory: ~/project
+    steps:
+      - checkout
+      - restore_cache:
+          <<: *cache-defaults
+      - run: *yarn
+      - save_cache: *cache-modules
+      - run: *build
+      - run:
+          name: Jest Testing
+          command: yarn test --ci
+      # - run:
+      #     name: Upload coverage
+      #     command: bash <(curl -s https://codecov.tools.a.intuit.com/bash)  -X s3
+      - store_artifacts:
+          path: coverage
+      - store_test_results:
+          path: coverage
+  test-integration:
+    docker:
+      - image: circleci/node:dubnium-browsers
+    working_directory: ~/project
+    steps:
+      - checkout
+      - restore_cache:
+          <<: *cache-defaults
+      - restore_cache:
+          <<: *cache-cypress
+      - run: *yarn
+      - save_cache: *cache-modules
+      - save_cache: *cache-cypress-modules
+      - run: *build
+      - run:
+          name: Cypress Testing
+          command: cd packages/client && yarn test:e2e:ci
+      - store_artifacts:
+          path: coverage
+  release:
+    docker:
+      - image: circleci/node:dubnium-browsers
+    working_directory: ~/project
+    steps:
+      - checkout
+      - restore_cache:
+          <<: *cache-defaults
+      - run: *yarn
+      - save_cache: *cache-modules
+      - run: *build
+      - run:
+          name: Assume Github Role
+          command: 'git config --global user.email "lshadler13@gmail.com" && git config --global user.name "lshadler"'
+      - run:
+          name: Auto Shipit
+          command: |
+            yarn release
+
+workflows:
+  version: 2
+  commit-workflow:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore:
+                - gh-pages
+      - type-check:
+          requires:
+            - build
+          filters:
+            branches:
+              ignore:
+                - gh-pages
+      - test-unit:
+          requires:
+            - build
+          filters:
+            branches:
+              ignore:
+                - gh-pages
+      - lint:
+          requires:
+            - build
+          filters:
+            branches:
+              ignore:
+                - gh-pages
+      - test-integration:
+          requires:
+            - build
+          filters:
+            branches:
+              ignore:
+                - gh-pages
+      - release:
+          requires:
+            - build
+            - test-unit
+            - test-integration
+            - type-check
+            - lint
+          filters:
+            branches:
+              only:
+                - master
+                - alpha
+                - beta
+                - next
+              ignore:
+                - gh-pages

@@ -4,13 +4,15 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
-    "build:no-export": "sapper build --legacy",
-    "build": "sapper export --legacy",
+    "build": "sapper build --legacy",
+    "export": "sapper export --legacy",
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
-    "test": "run-p --race dev cy:run",
-    "lint": "eslint --ext .js --ext .svelte src"
+    "test": "echo 'No jest tests yet'",
+    "lint": "eslint --ext .js --ext .svelte src",
+    "test:e2e": "run-p --race dev cy:open",
+    "test:e2e:ci": "run-p --race dev cy:run"
   },
   "dependencies": {
     "compression": "^1.7.1",
@@ -20,16 +22,23 @@
     "sirv": "^0.4.0"
   },
   "devDependencies": {
+    "@auto-it/conventional-commits": "^9.39.0",
+    "@auto-it/first-time-contributor": "^9.39.0",
+    "@auto-it/git-tag": "^9.39.0",
+    "@auto-it/released": "^9.39.0",
     "@babel/core": "^7.0.0",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/runtime": "^7.0.0",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "@rollup/plugin-babel": "^5.0.0",
     "@rollup/plugin-commonjs": "^12.0.0",
     "@rollup/plugin-node-resolve": "^8.0.0",
     "@rollup/plugin-replace": "^2.2.0",
     "@rollup/plugin-yaml": "^2.1.1",
+    "auto": "^9.39.0",
     "contact-congress": "https://github.com/unitedstates/contact-congress.git",
     "eslint": "^7.2.0",
     "eslint-config-airbnb-base": "^14.1.0",
