@@ -7,8 +7,9 @@ module.exports = {
   env: {
     es6: true,
     browser: true,
+    'cypress/globals': true,
   },
-  plugins: ['svelte3'],
+  plugins: ['svelte3', 'cypress'],
   overrides: [
     {
       files: ['*.svelte'],
