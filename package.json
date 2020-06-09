@@ -16,11 +16,11 @@
     "release": "auto shipit"
   },
   "dependencies": {
-    "compression": "^1.7.1",
+    "compression": "1.7.4",
     "congress-legislators": "https://github.com/unitedstates/congress-legislators.git",
     "polka": "next",
-    "sapper-google-analytics": "^1.0.1",
-    "sirv": "^0.4.0"
+    "sapper-google-analytics": "1.0.1",
+    "sirv": "0.4.6"
   },
   "devDependencies": {
     "@auto-it/conventional-commits": "^9.39.0",
