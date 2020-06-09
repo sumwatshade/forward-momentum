@@ -9,6 +9,8 @@
   const title = term.type === 'sen' ? 'Senator' : 'Representative';
   const districtInfo = term.type === 'sen' ? '' : `, District ${term.district}`;
   const { phone, office, contact_form } = term;
+
+  const fullName = name.official_full || `${name.first} ${name.last}`;
 </script>
 
 <style>
@@ -67,13 +69,13 @@
 
 </style>
 
-<h2>{data.name.official_full}</h2>
+<h2>{fullName}</h2>
 <div class="portrait">
   <img 
     class="image" 
     loading="lazy" 
     src={`https://theunitedstates.io/images/congress/225x275/${id.bioguide}.jpg`} 
-    alt={name.official_full || `${name.first} ${name.last}`} 
+    alt={fullName} 
     onerror="this.onerror=null;this.src='default.png';"/>
 </div>
 <div class="basic-info">

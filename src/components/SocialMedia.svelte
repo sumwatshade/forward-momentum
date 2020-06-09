@@ -7,10 +7,10 @@
       youtube: 'https://youtube.com/user/{{REP_ID}}',
       instagram: 'https://www.instagram.com/{{REP_ID}}/',
     };
-    const icons = Object.keys(media).filter((m) => m.indexOf('_id') === -1 && map[m]).map((type) => ({
+    const icons = media ? Object.keys(media).filter((m) => m.indexOf('_id') === -1 && map[m]).map((type) => ({
       type,
       link: map[type].replace('{{REP_ID}}', media[type]),
-    }));
+    })) : [];
     
 </script>
 
