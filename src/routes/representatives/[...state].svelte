@@ -42,7 +42,7 @@ import Representative from '../../components/Representative.svelte';
   onMount(() => {
     if (district && houseRefs[district]) {
       houseRefs[district].showPopup();
-    } else {
+    } else if (district) {
       warning = true;
     }
   });
@@ -66,10 +66,6 @@ import Representative from '../../components/Representative.svelte';
   color: #947700;
   margin-bottom: 20px;
 }
-
-p > a {
-  display: inline;
-}
 </style>
 
 <svelte:head>
@@ -80,7 +76,7 @@ p > a {
 <Modal>
   {#if warning}
   <div class="warning">
-    <p>You requested district {district}, which could not be found. Search for your representative below</p>
+    <p>You requested district <strong>{district}</strong>, which could not be found. Search for your representative below</p>
     <a href='district-map'>Click here to go back to the map</a>
   </div>
   {/if}
