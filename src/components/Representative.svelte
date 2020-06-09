@@ -24,7 +24,8 @@ export const showPopup = () => {
 .container {
   margin: 20px;
   padding: 20px;
-  min-width: 200px;
+  width: 225px;
+  flex-grow: 0;
   border: 1px solid black;
   border-radius: 3px;
   transition: background-color 0.3s;
@@ -65,11 +66,16 @@ export const showPopup = () => {
   margin-bottom: 20px;
 }
 
+.image {
+  height: 100%;
+  width: 100%;
+}
+
 </style>
 
 <div in:fade on:click={showPopup} class={`container ${term.party.toLowerCase()}`}>
   <div class="portrait">
-    <img loading="lazy" src={`https://theunitedstates.io/images/congress/225x275/${id.bioguide}.jpg`} alt={name.official_full || `${name.first} ${name.last}`} />
+    <img class="image" loading="lazy" src={`https://theunitedstates.io/images/congress/225x275/${id.bioguide}.jpg`} alt={name.official_full || `${name.first} ${name.last}`} onerror="this.onerror=null;this.src='default.png';"/>
   </div>
   <h2>{name.official_full || `${name.first} ${name.last}`}</h2>
   <h3>{title}{districtInfo}</h3>
