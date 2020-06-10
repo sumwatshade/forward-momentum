@@ -22,7 +22,7 @@
   import Modal from '../../components/Modal.svelte';
   import Representative from '../../components/Representative.svelte';
   import InvalidRepWarning from '../../components/InvalidRepWarning.svelte';
-
+  import { codeToStateMap } from '../../utils/state-map';
 
   export let reps;
   export let state;
@@ -40,6 +40,8 @@
     return true;
   }).sort((a, b) => a.term.district - b.term.district);
   
+  const houseToken = house.length > 1 ? `${house.length} Representatives` : 'One Representative';
+
   onMount(() => {
     if (district && houseRefs[district]) {
       houseRefs[district].showPopup();
@@ -68,8 +70,9 @@
     <InvalidRepWarning {district} />
   {/if}
 
+  <h1>{codeToStateMap[state]}</h1>
   {#if senate.length}
-    <h1>US Senate ({senate.length})</h1>
+    <h2>US Senators</h2>
     <div class="grid">
       {#each senate as rep}
         <!-- we're using the non-standard `rel=prefetch` attribute to
@@ -82,7 +85,7 @@
   {/if}
 
   {#if house.length}
-    <h1>House of representatives ({house.length})</h1>
+    <h2>{houseToken}</h2>
     <div class="grid">
       {#each house as rep}
         <!-- we're using the non-standard `rel=prefetch` attribute to
