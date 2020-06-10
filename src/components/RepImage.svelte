@@ -1,6 +1,9 @@
 <script>
+    export let hideOnMobile = false;
     export let fullName;
     export let id;
+
+    const className = ['portrait', hideOnMobile ? 'hide-on-mobile' : ''].filter(Boolean).join(' ');
 </script>
 
 <style>
@@ -15,9 +18,15 @@
   width: 100%;
 }
 
+@media(max-width: 620px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
 </style>
 
-<div class="portrait">
+<div class={className}>
   <img 
     class="image" 
     loading="lazy" 
