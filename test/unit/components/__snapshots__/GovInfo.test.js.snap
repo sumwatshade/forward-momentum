@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GovInfo matches snapshot 1`] = `"<div><a class=\\"blue fa fa-id-card svelte-1b6o2g4\\" target=\\"_blank\\" rel=\\"noopener noreferer\\" href=\\"test\\">&nbsp;<span class=\\"svelte-1b6o2g4\\">Online contact form</span></a>   </div>"`;

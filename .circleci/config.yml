@@ -70,7 +70,7 @@ jobs:
       - save_cache: *cache-modules
       - run:
           name: Jest Testing
-          command: yarn test --ci
+          command: yarn test:unit --ci
       # - run:
       #     name: Upload coverage
       #     command: bash <(curl -s https://codecov.tools.a.intuit.com/bash)  -X s3
