@@ -3,8 +3,8 @@
       "config:base"
   ],
   "patch": {
-    "automerge": true,
-    "labels": ["automerge", "patch-dependency-update"]  },
+    "labels": ["automerge", "patch-dependency-update"]  
+  },
   "minor": {
     "labels": ["minor-dependency-update"]  
   },

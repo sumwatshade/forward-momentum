@@ -11,7 +11,7 @@ const { name, term, id } = rep;
 
 const fullName = name.official_full || `${name.first} ${name.last}`;
 const title = term.type === 'sen' ? 'Senator' : 'Representative';
-const districtInfo = term.type === 'sen' ? '' : `, District ${term.district}`;
+const districtInfo = term.type === 'sen' || term.district === 0 ? '' : `, District ${term.district}`;
 
 export const showPopup = () => {
   open(RepInfo, { data: rep });
