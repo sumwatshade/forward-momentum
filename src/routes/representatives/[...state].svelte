@@ -40,7 +40,7 @@
     return true;
   }).sort((a, b) => a.term.district - b.term.district);
   
-  const houseToken = house.length > 1 ? `${house.length} Representatives` : 'One Representative';
+  const houseToken = house.length > 1 ? `${house.length} House Representatives` : 'One House Representative';
 
   onMount(() => {
     if (district && houseRefs[district]) {

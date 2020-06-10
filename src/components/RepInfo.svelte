@@ -9,8 +9,9 @@
     id, social, term, name,
   } = data;
   
-  const title = term.type === 'sen' ? 'Senator' : 'Representative';
-  const districtInfo = term.type === 'sen' ? '' : `, District ${term.district}`;
+  const title = term.type === 'sen' ? 'Senator' : 'House Representative';
+  const districtInfo = term.type === 'sen' || term.district === 0 ? '' : `, District ${term.district}`;
+
   const { phone, office } = term;
 
   const fullName = name.official_full || `${name.first} ${name.last}`;
