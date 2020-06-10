@@ -19,8 +19,9 @@
 
 <script>
   import { onMount } from 'svelte';
-import Modal from '../../components/Modal.svelte';
-import Representative from '../../components/Representative.svelte';
+  import Modal from '../../components/Modal.svelte';
+  import Representative from '../../components/Representative.svelte';
+  import InvalidRepWarning from '../../components/InvalidRepWarning.svelte';
 
 
   export let reps;
@@ -55,17 +56,6 @@ import Representative from '../../components/Representative.svelte';
   padding: 10px;
 }
 
-.warning {
-  border-radius: 3px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  place-items: center;
-  border: 1px solid 	#dab600;
-  background-color: 	#f8ed62;
-  color: #947700;
-  margin-bottom: 20px;
-}
 </style>
 
 <svelte:head>
@@ -75,10 +65,7 @@ import Representative from '../../components/Representative.svelte';
 
 <Modal>
   {#if warning}
-  <div data-automation="invalid-rep-warning" class="warning">
-    <p>You requested district <strong>{district}</strong>, which could not be found. Search for your representative below</p>
-    <a href='district-map'>Click here to go back to the map</a>
-  </div>
+    <InvalidRepWarning {district} />
   {/if}
 
   {#if senate.length}
