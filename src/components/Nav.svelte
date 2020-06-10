@@ -39,6 +39,9 @@
 nav {
   background: rgb(60,59,110);
   background: linear-gradient(315deg, rgba(60,59,110,1) 0%, rgba(178,34,52,1) 100%);
+  background-image: url('/nav-back.png');
+  background-repeat: repeat-x;
+  background-size: 1440px 60px;
   height: 60px;
   font-size: 1em;
 }
@@ -168,8 +171,15 @@ nav {
   }
 
   .navbar-list {
+    background: linear-gradient(315deg, rgba(60,59,110,0) 0%, rgba(178,34,52,1) 100%);
     display: flex;
-    padding: 0;
+    flex-basis: 250px;
+    padding-left: 10px;
+    padding-right: 225px;
+  }
+
+  .inner {
+    padding-left: 0;
   }
 
   .navbar-list a {
