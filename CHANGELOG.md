@@ -1,3 +1,20 @@
+# v0.3.1 (Wed Jun 10 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot)), for all your work!
+
+#### 🐛 Bug Fix
+
+- fix(deps): update dependency sirv to v1 [#17](https://github.com/lshadler/forward-momentum/pull/17) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+
+#### Authors: 2
+
+- [@renovate[bot]](https://github.com/renovate[bot])
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.3.0 (Wed Jun 10 2020)
 
 #### 🚀 Enhancement
