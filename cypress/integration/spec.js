@@ -24,6 +24,7 @@ describe('Sapper template app', () => {
     cy.get('[data-automation=state-ca]').click();
 
     cy.url().should('include', '/representatives/ca');
+    cy.contains('h1', 'California');
     cy.get('[data-automation=rep-D000598]').should('exist');
     cy.get('[data-automation=rep-D000598] img').should('be.visible');
     cy.get('[data-automation=rep-D000598]').click();
