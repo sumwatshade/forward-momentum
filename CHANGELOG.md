@@ -1,3 +1,15 @@
+# v0.3.0 (Wed Jun 10 2020)
+
+#### 🚀 Enhancement
+
+- feat: various ui changes [#18](https://github.com/lshadler/forward-momentum/pull/18) ([@lshadler](https://github.com/lshadler))
+
+#### Authors: 1
+
+- Lucas Shadler ([@lshadler](https://github.com/lshadler))
+
+---
+
 # v0.2.1 (Wed Jun 10 2020)
 
 :tada: This release contains work from a new contributor! :tada:
