@@ -20,7 +20,7 @@
     "congress-legislators": "https://github.com/unitedstates/congress-legislators.git",
     "polka": "next",
     "sapper-google-analytics": "1.0.1",
-    "sirv": "0.4.6"
+    "sirv": "1.0.0"
   },
   "devDependencies": {
     "@auto-it/conventional-commits": "9.39.0",
