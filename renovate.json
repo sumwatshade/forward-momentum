@@ -3,13 +3,17 @@
       "config:base"
   ],
   "patch": {
-    "labels": ["automerge", "patch-dependency-update"]
+    "automerge": true,
+    "labels": ["automerge", "patch-dependency-update"],
+    "semanticCommitType": "fix"
   },
   "minor": {
-    "labels": ["minor-dependency-update"]
+    "labels": ["minor-dependency-update"],
+    "semanticCommitType": "feat"
   },
   "major": {
-    "labels": ["major-dependency-update"]
+    "labels": ["major-dependency-update"],
+    "semanticCommitType": "feat"
   },
   "digest": {
     "labels": ["digest", "automerge", "dependency-update"]
