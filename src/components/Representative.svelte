@@ -4,6 +4,8 @@ import { getContext } from 'svelte';
 import RepInfo from './RepInfo.svelte';
 
 export let rep;
+export let state;
+
 const { open } = getContext('simple-modal');
 const { name, term, id } = rep;
 const title = term.type === 'sen' ? 'Senator' : 'Representative';
@@ -66,7 +68,7 @@ export const showPopup = () => {
 
 </style>
 
-<div in:fade on:click={showPopup} class={`container ${term.party.toLowerCase()}`}>
+<div data-automation={`rep-${id.bioguide}`} in:fade on:click={showPopup} class={`container ${term.party.toLowerCase()}`}>
   <div class="portrait">
     <img 
       class="image" 

@@ -5,7 +5,8 @@
 
   const {
     id, social, term, name,
-} = data;
+  } = data;
+  
   const title = term.type === 'sen' ? 'Senator' : 'Representative';
   const districtInfo = term.type === 'sen' ? '' : `, District ${term.district}`;
   const { phone, office, contact_form } = term;
@@ -72,7 +73,7 @@
 
 </style>
 
-<h2>{fullName}</h2>
+<h2 data-automation="rep-info-fullname">{fullName}</h2>
 <div class="portrait">
   <img 
     class="image" 

@@ -2,7 +2,7 @@
   <title>About</title>
 </svelte:head>
 
-<h1>About this site</h1>
+<h1 data-automation="about-title">About this site</h1>
 
 <p>This project aims to make it easier to get 
 information about your state representatives. We will

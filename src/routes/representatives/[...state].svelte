@@ -75,7 +75,7 @@ import Representative from '../../components/Representative.svelte';
 
 <Modal>
   {#if warning}
-  <div class="warning">
+  <div data-automation="invalid-rep-warning" class="warning">
     <p>You requested district <strong>{district}</strong>, which could not be found. Search for your representative below</p>
     <a href='district-map'>Click here to go back to the map</a>
   </div>

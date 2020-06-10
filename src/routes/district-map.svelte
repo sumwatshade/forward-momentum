@@ -43,7 +43,7 @@
     }
 </script>
 
-<h1>District Map</h1>
+<h1 data-automation="district-map-title">District Map</h1>
 
 <p>We have embedded a map from GovTrack in order to support clarity on who your representatives are. If you want a more accurate idea of what your representative is involved in, please follow the instructions immediately following the map.</p>
 
@@ -63,6 +63,7 @@ src="https://www.govtrack.us/congress/members/embed/mapframe?&bounds=-158.518,57
 <label for='state'>State Code</label>
 <input 
     id="state"
+    data-automation="district-map-form-state-code"
     type="text"
     label="State" 
     placeholder="CA" 
@@ -83,6 +84,7 @@ src="https://www.govtrack.us/congress/members/embed/mapframe?&bounds=-158.518,57
     id='district'
     type="text"
     placeholder="11" 
+    data-automation="district-map-form-district-code"
     bind:value={district}
     class:field-danger={!editing.district && !$districtValidity.valid}
     class:field-success={!editing.district && $districtValidity.valid}
@@ -97,6 +99,7 @@ src="https://www.govtrack.us/congress/members/embed/mapframe?&bounds=-158.518,57
 {/if}
 
 <button 
+    data-automation="district-map-form-submit"
     on:click|preventDefault={onSubmit} 
     on:keydown|preventDefault={onKeyPress} 
     disabled={!$stateValidity.valid || !$districtValidity.valid}>Show Representative</button>
