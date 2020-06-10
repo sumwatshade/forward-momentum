@@ -1,3 +1,40 @@
+# v0.1.0 (Wed Jun 10 2020)
+
+:tada: This release contains work from new contributors! :tada:
+
+Thanks for all your work!
+
+:heart: WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+:heart: Lucas Shadler ([@lshadler](https://github.com/lshadler))
+
+#### 🚀 Enhancement
+
+- feat(deps): update dependency @rollup/plugin-commonjs to v13 [#9](https://github.com/lshadler/forward-momentum/pull/9) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+
+#### 🐛 Bug Fix
+
+- chore(deps): update dependency rollup-plugin-terser to v6 [#10](https://github.com/lshadler/forward-momentum/pull/10) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- chore(deps): update dependency svelte to v3.23.1 [#8](https://github.com/lshadler/forward-momentum/pull/8) ([@renovate-bot](https://github.com/renovate-bot))
+- chore(deps): update dependency eslint-plugin-import to v2.21.2 [#11](https://github.com/lshadler/forward-momentum/pull/11) ([@renovate-bot](https://github.com/renovate-bot))
+- chore(deps): update dependency sapper to v0.27.14 [#7](https://github.com/lshadler/forward-momentum/pull/7) ([@renovate-bot](https://github.com/renovate-bot))
+- chore(deps): update dependency rollup to v2.15.0 [#6](https://github.com/lshadler/forward-momentum/pull/6) ([@renovate-bot](https://github.com/renovate-bot))
+- chore(deps): pin dependencies [#4](https://github.com/lshadler/forward-momentum/pull/4) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- fix(deps): pin dependencies [#5](https://github.com/lshadler/forward-momentum/pull/5) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- chore: add renovate [#3](https://github.com/lshadler/forward-momentum/pull/3) ([@lshadler](https://github.com/lshadler))
+
+#### ⚠️ Pushed to `master`
+
+- chore: update renovate config ([@lshadler](https://github.com/lshadler))
+
+#### Authors: 3
+
+- [@renovate[bot]](https://github.com/renovate[bot])
+- Lucas Shadler ([@lshadler](https://github.com/lshadler))
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.0.1 (Tue Jun 09 2020)
 
 :tada: This release contains work from a new contributor! :tada:
