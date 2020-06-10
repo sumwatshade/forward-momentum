@@ -1,10 +1,56 @@
+function makeMobile() {
+  cy.viewport(375, 812);
+}
+
+function makeDesktop() {
+  cy.viewport(1280, 743);
+}
+
 describe('Sapper template app', () => {
   beforeEach(() => {
+    makeDesktop();
     cy.visit('/');
   });
 
   it('has the correct <h1>', () => {
     cy.contains('h1', 'Who are my representatives?');
+  });
+
+  it('can find a representative', () => {
+    cy.get('[data-automation=state-ca]').should(
+      'include.text',
+      'CA',
+    );
+    cy.get('[data-automation=state-ca]').click();
+
+    cy.url().should('include', '/representatives/ca');
+    cy.get('[data-automation=rep-D000598]').should('exist');
+    cy.get('[data-automation=rep-D000598] img').should('be.visible');
+    cy.get('[data-automation=rep-D000598]').click();
+    cy.get('[data-automation=rep-info-fullname]').should(
+      'have.html',
+      'Susan A. Davis',
+    );
+  });
+
+  it('mobile :: can find a representative with no images', () => {
+    makeMobile();
+
+    cy.get('[data-automation=state-ca]').should(
+      'include.text',
+      'CA',
+    );
+    cy.get('[data-automation=state-ca]').click();
+
+    cy.url().should('include', '/representatives/ca');
+    cy.get('[data-automation=rep-D000598]').should('exist');
+    cy.get('[data-automation=rep-D000598] img').should('not.be.visible');
+    cy.get('[data-automation=rep-D000598]').click();
+
+    cy.get('[data-automation=rep-info-fullname]').should(
+      'have.html',
+      'Susan A. Davis',
+    );
   });
 
   it('navigates to /about', () => {
@@ -40,5 +86,28 @@ describe('Sapper template app', () => {
 
     cy.url().should('include', '/representatives/ca/111');
     cy.get('[data-automation=invalid-rep-warning]').should('exist');
+  });
+
+  it('fills out form with bad representative data, then fixes', () => {
+    cy.get('nav a').contains('district map').click();
+    cy.url().should('include', '/district-map');
+    cy.get('[data-automation=district-map-form-state-code]').type('ca');
+    cy.get('[data-automation=district-map-form-district-code]').type('111');
+    cy.get('[data-automation=district-map-form-submit]').click();
+
+    cy.url().should('include', '/representatives/ca/111');
+    cy.get('[data-automation=invalid-rep-warning]').should('exist');
+    cy.get('[data-automation=invalid-rep-warning] a').click();
+
+    cy.get('[data-automation=district-map-form-state-code]').type('ca');
+    cy.get('[data-automation=district-map-form-district-code]').type('53');
+    cy.get('[data-automation=district-map-form-submit]').click();
+
+    cy.url().should('include', '/representatives/ca/53');
+    cy.get('[data-automation=rep-info-fullname]').should(
+      'have.html',
+      'Susan A. Davis',
+    );
+    cy.get('[data-automation=invalid-rep-warning]').should('not.exist');
   });
 });

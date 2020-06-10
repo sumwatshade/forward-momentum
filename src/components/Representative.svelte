@@ -42,9 +42,6 @@ export const showPopup = () => {
   .container {
     width: 100%;
   }
-  .portrait {
-    display: none;
-  }
 }
 
 .republican {
@@ -57,11 +54,7 @@ export const showPopup = () => {
   border-color: #3C3B6E;
 }
 
-.portrait {
-  width: 225px;
-  height: 275px;
-  margin-bottom: 20px;
-}
+
 
 .image {
   height: 100%;
@@ -71,7 +64,7 @@ export const showPopup = () => {
 </style>
 
 <div data-automation={`rep-${id.bioguide}`} in:fade on:click={showPopup} class={`container ${term.party.toLowerCase()}`}>
-  <RepImage {fullName} {id}/>
+  <RepImage {fullName} {id} hideOnMobile={true}/>
   <h2>{fullName}</h2>
   <h3>{title}{districtInfo}</h3>
   <h4>{term.party}</h4>
