@@ -4,16 +4,12 @@
   ],
   "patch": {
     "automerge": true,
-    "labels": ["automerge", "patch-dependency-update"],
-    "semanticCommitType": "fix"
-  },
+    "labels": ["automerge", "patch-dependency-update"]  },
   "minor": {
-    "labels": ["minor-dependency-update"],
-    "semanticCommitType": "feat"
+    "labels": ["minor-dependency-update"]  
   },
   "major": {
-    "labels": ["major-dependency-update"],
-    "semanticCommitType": "feat"
+    "labels": ["major-dependency-update"]  
   },
   "digest": {
     "labels": ["digest", "automerge", "dependency-update"]

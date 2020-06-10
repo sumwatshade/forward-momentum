@@ -2,10 +2,14 @@
 import { fade } from 'svelte/transition';
 import { getContext } from 'svelte';
 import RepInfo from './RepInfo.svelte';
+import RepImage from './RepImage.svelte';
 
 export let rep;
+
 const { open } = getContext('simple-modal');
 const { name, term, id } = rep;
+
+const fullName = name.official_full || `${name.first} ${name.last}`;
 const title = term.type === 'sen' ? 'Senator' : 'Representative';
 const districtInfo = term.type === 'sen' ? '' : `, District ${term.district}`;
 
@@ -66,16 +70,9 @@ export const showPopup = () => {
 
 </style>
 
-<div in:fade on:click={showPopup} class={`container ${term.party.toLowerCase()}`}>
-  <div class="portrait">
-    <img 
-      class="image" 
-      loading="lazy" 
-      src={`https://theunitedstates.io/images/congress/225x275/${id.bioguide}.jpg`} 
-      alt={name.official_full || `${name.first} ${name.last}`} 
-      onerror="this.onerror=null;this.src='default.png';"/>
-  </div>
-  <h2>{name.official_full || `${name.first} ${name.last}`}</h2>
+<div data-automation={`rep-${id.bioguide}`} in:fade on:click={showPopup} class={`container ${term.party.toLowerCase()}`}>
+  <RepImage {fullName} {id}/>
+  <h2>{fullName}</h2>
   <h3>{title}{districtInfo}</h3>
   <h4>{term.party}</h4>
 </div>

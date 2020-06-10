@@ -14,6 +14,19 @@ const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
 const legacy = !!process.env.SAPPER_LEGACY_BUILD;
 
+const babelPlugins = [
+  '@babel/plugin-syntax-dynamic-import',
+  ['@babel/plugin-transform-runtime', {
+    useESModules: true,
+  }],
+];
+
+if (!dev) {
+  babelPlugins.push(['babel-plugin-remove-attribute', {
+    attribute: 'data-automation',
+  }]);
+}
+
 const onwarn = (warning, onwarnFunc) => (warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message)) || onwarnFunc(warning);
 
 export default {
@@ -46,12 +59,7 @@ export default {
             targets: '> 0.25%, not dead',
           }],
         ],
-        plugins: [
-          '@babel/plugin-syntax-dynamic-import',
-          ['@babel/plugin-transform-runtime', {
-            useESModules: true,
-          }],
-        ],
+        plugins: babelPlugins,
       }),
 
       !dev && terser({
