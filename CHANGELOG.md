@@ -1,3 +1,27 @@
+# v0.2.0 (Wed Jun 10 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot)), for all your work!
+
+#### 🚀 Enhancement
+
+- feat: add fancy nav styling [#15](https://github.com/lshadler/forward-momentum/pull/15) ([@lshadler](https://github.com/lshadler))
+
+#### 🐛 Bug Fix
+
+- chore: update cypress testing [#14](https://github.com/lshadler/forward-momentum/pull/14) ([@lshadler](https://github.com/lshadler))
+- chore(deps): pin dependency babel-plugin-remove-attribute to 1.0.0 [#13](https://github.com/lshadler/forward-momentum/pull/13) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- chore: update renovate config [#12](https://github.com/lshadler/forward-momentum/pull/12) ([@lshadler](https://github.com/lshadler))
+
+#### Authors: 3
+
+- [@renovate[bot]](https://github.com/renovate[bot])
+- Lucas Shadler ([@lshadler](https://github.com/lshadler))
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.1.0 (Wed Jun 10 2020)
 
 :tada: This release contains work from new contributors! :tada:
