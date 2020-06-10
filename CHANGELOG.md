@@ -1,3 +1,19 @@
+# v0.2.1 (Wed Jun 10 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot)), for all your work!
+
+#### 🐛 Bug Fix
+
+- Update dependency svelte to v3.23.2 [#16](https://github.com/lshadler/forward-momentum/pull/16) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.2.0 (Wed Jun 10 2020)
 
 :tada: This release contains work from a new contributor! :tada:
