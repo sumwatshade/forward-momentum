@@ -10,4 +10,10 @@ describe('InvalidRepWarning', () => {
 
     expect(container.innerHTML).toMatchSnapshot();
   });
+
+  test('matches snapshot', () => {
+    const { container } = render(Comp, { district: 10 });
+
+    expect(container.innerHTML).toMatchSnapshot();
+  });
 });

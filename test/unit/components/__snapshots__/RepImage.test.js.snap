@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RepImage matches snapshot 1`] = `"<div><div class=\\"portrait svelte-1hr3e5j\\"><img class=\\"image svelte-1hr3e5j\\" loading=\\"lazy\\" src=\\"https://theunitedstates.io/images/congress/225x275/A1234.jpg\\" onerror=\\"this.onerror=null;this.src='default.png';\\"></div></div>"`;

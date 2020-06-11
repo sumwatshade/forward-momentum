@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SocialMedia no data - matches snapshot 1`] = `"<div><div><a class=\\"fa fa-twitter svelte-10xon1u\\" href=\\"https://twitter.com/reppersontwitter\\" target=\\"_blank\\" rel=\\"noopener noreferer\\"></a><a class=\\"fa fa-facebook svelte-10xon1u\\" href=\\"https://facebook.com/reppersontwitter\\" target=\\"_blank\\" rel=\\"noopener noreferer\\"></a><a class=\\"fa fa-youtube svelte-10xon1u\\" href=\\"https://youtube.com/user/reppersontwitter\\" target=\\"_blank\\" rel=\\"noopener noreferer\\"></a><a class=\\"fa fa-instagram svelte-10xon1u\\" href=\\"https://www.instagram.com/reppersontwitter/\\" target=\\"_blank\\" rel=\\"noopener noreferer\\"></a></div></div>"`;
+
+exports[`SocialMedia some data - matches snapshot 1`] = `"<div><div></div></div>"`;
