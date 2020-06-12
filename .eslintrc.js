@@ -8,8 +8,9 @@ module.exports = {
     es6: true,
     browser: true,
     'cypress/globals': true,
+    'jest/globals': true,
   },
-  plugins: ['svelte3', 'cypress'],
+  plugins: ['svelte3', 'cypress', 'jest'],
   overrides: [
     {
       files: ['*.svelte'],

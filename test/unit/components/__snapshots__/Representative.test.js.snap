@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Representative senator matches snapshot 1`] = `"<div><div data-automation=\\"rep-S1234\\" class=\\"container republican svelte-18wvjc9\\"><div class=\\"portrait hide-on-mobile svelte-1hr3e5j\\"><img class=\\"image svelte-1hr3e5j\\" loading=\\"lazy\\" src=\\"https://theunitedstates.io/images/congress/225x275/S1234.jpg\\" alt=\\"Test Sen\\" onerror=\\"this.onerror=null;this.src='default.png';\\"></div> <h2>Test Sen</h2> <h3>Senator</h3> <h4>Republican</h4></div></div>"`;
+
+exports[`Representative senator matches snapshot 2`] = `"<div><div data-automation=\\"rep-A1234\\" class=\\"container democrat svelte-18wvjc9\\"><div class=\\"portrait hide-on-mobile svelte-1hr3e5j\\"><img class=\\"image svelte-1hr3e5j\\" loading=\\"lazy\\" src=\\"https://theunitedstates.io/images/congress/225x275/A1234.jpg\\" alt=\\"Test Rep\\" onerror=\\"this.onerror=null;this.src='default.png';\\"></div> <h2>Test Rep</h2> <h3>Representative, District 3</h3> <h4>Democrat</h4></div></div>"`;

@@ -5,3 +5,5 @@ yarn-error.log
 /cypress/screenshots/
 /__sapper__/
 .eslintcache
+coverage/*
+coverage/lcov-report/*

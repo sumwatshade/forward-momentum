@@ -49,6 +49,21 @@
       warning = true;
     }
   });
+
+  const seoDescription = `A listing of members of congress from ${state}`;
+  const seoTitle = codeToStateMap[state];
+  const seoKeywords = [
+    'state',
+    'congress',
+    'representatives',
+    'government',
+    'US',
+    state,
+    codeToStateMap[state],
+  ].join(',');
+  const seoUrl = `https://whoaremyrepresentatives.us/representatives/${state}`;
+  // TODO: add state-level seo image
+  const seoImage = null;
 </script>
 
 <style>
@@ -61,8 +76,27 @@
 </style>
 
 <svelte:head>
-  <title>{state}</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>{seoTitle}</title>
+  <meta name="description" content={seoDescription} />
+  <meta name="keywords" content={seoKeywords}/>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content={seoUrl}>
+  <meta property="og:title" content={seoTitle}>
+  <meta property="og:description" content={seoDescription}>
+  {#if seoImage}
+  <meta property="og:image" content="{seoImage}">
+  {/if}
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary">
+  <meta property="twitter:url" content={seoUrl}>
+  <meta property="twitter:title" content={seoTitle}>
+  <meta property="twitter:description" content={seoDescription}>
+  {#if seoImage}
+  <meta property="twitter:image" content="{seoImage}">
+  {/if}
 </svelte:head>
 
 <Modal>
@@ -79,7 +113,7 @@
                 tell Sapper to load the data for the page as soon as
                 the user hovers over the link or taps it, instead of
                 waiting for the 'click' event -->
-        <Representative {rep} />
+        <Representative {rep} {state} />
       {/each}
     </div>
   {/if}
@@ -92,7 +126,7 @@
                 tell Sapper to load the data for the page as soon as
                 the user hovers over the link or taps it, instead of
                 waiting for the 'click' event -->
-        <Representative {rep} bind:this={houseRefs[rep.term.district]}/>
+        <Representative {rep} {state} bind:this={houseRefs[rep.term.district]}/>
       {/each}
     </div>
   {/if}

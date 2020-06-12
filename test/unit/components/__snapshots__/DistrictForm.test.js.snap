@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DistrictForm matches snapshot 1`] = `"<div><form class=\\"svelte-16d2nxj\\"><label for=\\"state\\">State Code</label> <input id=\\"state\\" data-automation=\\"district-map-form-state-code\\" type=\\"text\\" label=\\"State\\" placeholder=\\"CA\\" class=\\"svelte-16d2nxj\\">  <label for=\\"district\\">District Code</label> <input id=\\"district\\" type=\\"text\\" placeholder=\\"11\\" data-automation=\\"district-map-form-district-code\\" class=\\"svelte-16d2nxj\\">  <button data-automation=\\"district-map-form-submit\\" disabled=\\"\\" class=\\"svelte-16d2nxj\\">Show Representative</button></form></div>"`;

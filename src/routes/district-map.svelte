@@ -5,7 +5,47 @@
     async function onSubmit(state, district) {
       await goto(`representatives/${state.toLowerCase()}/${district.toLowerCase()}`);
     }
+
+const seoDescription = 'Find your district representative using a map of the United States districts';
+const seoTitle = 'United States District Map';
+const seoKeywords = [
+      'state',
+      'congress',
+      'representatives',
+      'government',
+      'US',
+      'District',
+      'Map',
+].join(',');
+const seoUrl = 'https://whoaremyrepresentatives.us/district-map';
+// TODO: add state-level seo image
+const seoImage = null;
 </script>
+
+<svelte:head>
+  <title>{seoTitle}</title>
+  <meta name="description" content={seoDescription} />
+  <meta name="keywords" content={seoKeywords}/>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content={seoUrl}>
+  <meta property="og:title" content={seoTitle}>
+  <meta property="og:description" content={seoDescription}>
+  {#if seoImage}
+  <meta property="og:image" content="{seoImage}">
+  {/if}
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary">
+  <meta property="twitter:url" content={seoUrl}>
+  <meta property="twitter:title" content={seoTitle}>
+  <meta property="twitter:description" content={seoDescription}>
+  {#if seoImage}
+  <meta property="twitter:image" content="{seoImage}">
+  {/if}
+</svelte:head>
+
 
 <h1 data-automation="district-map-title">District Map</h1>
 
