@@ -1,5 +1,43 @@
+<script>
+    const seoDescription = 'About this site';
+    const seoTitle = 'About';
+    const seoKeywords = [
+      'congress',
+      'representatives',
+      'government',
+      'US',
+      'politics',
+      'senate',
+      'house',
+      'about',
+    ].join(',');
+    const seoUrl = 'https://whoaremyrepresentatives.us/about';
+    // TODO: add state-level seo image
+    const seoImage = 'flag.png';
+</script>
+
 <svelte:head>
-  <title>About</title>
+  <title>{seoTitle}</title>
+  <meta name="description" content={seoDescription} />
+  <meta name="keywords" content={seoKeywords}/>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content={seoUrl}>
+  <meta property="og:title" content={seoTitle}>
+  <meta property="og:description" content={seoDescription}>
+  {#if seoImage}
+  <meta property="og:image" content="{seoImage}">
+  {/if}
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content={seoUrl}>
+  <meta property="twitter:title" content={seoTitle}>
+  <meta property="twitter:description" content={seoDescription}>
+  {#if seoImage}
+  <meta property="twitter:image" content="{seoImage}">
+  {/if}
 </svelte:head>
 
 <h1 data-automation="about-title">About this site</h1>

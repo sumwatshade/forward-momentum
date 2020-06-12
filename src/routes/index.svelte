@@ -12,6 +12,21 @@
         await goto(`representatives/${state.id}`);
       };
     }
+
+    const seoDescription = 'An easy way to find contact information, bill voting statistics, and general information about your representatives';
+    const seoTitle = 'Who are my Representatives?';
+    const seoKeywords = [
+      'congress',
+      'representatives',
+      'government',
+      'US',
+      'politics',
+      'senate',
+      'house',
+    ].join(',');
+    const seoUrl = 'https://whoaremyrepresentatives.us/';
+    // TODO: add state-level seo image
+    const seoImage = 'flag.png';
 </script>
 
 <style>
@@ -89,6 +104,30 @@
 }
 
 </style>
+
+<svelte:head>
+  <title>{seoTitle}</title>
+  <meta name="description" content={seoDescription} />
+  <meta name="keywords" content={seoKeywords}/>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content={seoUrl}>
+  <meta property="og:title" content={seoTitle}>
+  <meta property="og:description" content={seoDescription}>
+  {#if seoImage}
+  <meta property="og:image" content="{seoImage}">
+  {/if}
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content={seoUrl}>
+  <meta property="twitter:title" content={seoTitle}>
+  <meta property="twitter:description" content={seoDescription}>
+  {#if seoImage}
+  <meta property="twitter:image" content="{seoImage}">
+  {/if}
+</svelte:head>
 
 <div class="container">
 	<h1>Who are my representatives?</h1>
