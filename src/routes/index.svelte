@@ -131,7 +131,7 @@
       background: linear-gradient(315deg,rgba(178,34,52,1) 0%, rgba(178,34,52,1) ${getRatio(state) - 1}%, rgba(60,59,110,1) ${getRatio(state) + 1}%,  rgba(60,59,110,1) 100%)
     `}>
       <div tabindex="0" class={`w-32 h-32 p-5 flex flex-row content-center justify-center bg-white state ${state.numDem > state.numRep ? 'dem' : 'rep'}`} on:click={onClick(state)}>
-          <a tabindex="-1" rel='prefetch' class="m-auto text-4xl hover:outline-none focus:outline-none" href='representatives/{state.id}'>{state.id.toUpperCase()}</a>
+          <a tabindex="-1" rel='prefetch' class="m-auto text-4xl hover:outline-none focus:outline-none" href='representatives/{state.id.toLowerCase()}'>{state.id.toUpperCase()}</a>
           <div class="text-2xl num-dem dem">{state.numDem}</div>
           <div class="text-2xl num-rep rep">{state.numRep}</div>
       </div>

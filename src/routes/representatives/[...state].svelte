@@ -1,7 +1,7 @@
 <script context="module">
   export async function preload({ params }) {
     const [state] = params.state;
-    const res = await this.fetch(`representatives/state/${state}.json`);
+    const res = await this.fetch(`representatives/state/${state.toLowerCase()}.json`);
     const data = await res.json();
   
     if (res.status === 200) {
