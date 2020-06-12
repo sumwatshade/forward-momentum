@@ -1,3 +1,25 @@
+# v0.5.0 (Fri Jun 12 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot)), for all your work!
+
+#### 🚀 Enhancement
+
+- feat: add tailwind css [#29](https://github.com/lshadler/forward-momentum/pull/29) ([@lshadler](https://github.com/lshadler))
+
+#### 🐛 Bug Fix
+
+- fix(deps): pin dependency @fullhuman/postcss-purgecss to 2.2.0 [#35](https://github.com/lshadler/forward-momentum/pull/35) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+
+#### Authors: 3
+
+- [@renovate[bot]](https://github.com/renovate[bot])
+- Lucas Shadler ([@lshadler](https://github.com/lshadler))
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.4.2 (Fri Jun 12 2020)
 
 :tada: This release contains work from a new contributor! :tada:
