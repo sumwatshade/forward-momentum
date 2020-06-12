@@ -1,3 +1,15 @@
+# v0.4.1 (Fri Jun 12 2020)
+
+#### 🐛 Bug Fix
+
+- fix: client side query param adjustment [#27](https://github.com/lshadler/forward-momentum/pull/27) ([@lshadler](https://github.com/lshadler))
+
+#### Authors: 1
+
+- Lucas Shadler ([@lshadler](https://github.com/lshadler))
+
+---
+
 # v0.4.0 (Fri Jun 12 2020)
 
 :tada: This release contains work from a new contributor! :tada:
