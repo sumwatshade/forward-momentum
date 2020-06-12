@@ -5,6 +5,7 @@ import RepInfo from './RepInfo.svelte';
 import RepImage from './RepImage.svelte';
 
 export let rep;
+export let state;
 
 const { open } = getContext('simple-modal');
 const { name, term, id } = rep;
@@ -14,8 +15,9 @@ const title = term.type === 'sen' ? 'Senator' : 'Representative';
 const districtInfo = term.type === 'sen' || term.district === 0 ? '' : `, District ${term.district}`;
 
 export const showPopup = () => {
-  open(RepInfo, { data: rep });
+  open(RepInfo, { data: rep, state });
 };
+
 </script>
 
 <style>
@@ -62,6 +64,7 @@ export const showPopup = () => {
 }
 
 </style>
+
 
 <div data-automation={`rep-${id.bioguide}`} in:fade on:click={showPopup} class={`container ${term.party.toLowerCase()}`}>
   <RepImage {fullName} {id} hideOnMobile={true}/>
