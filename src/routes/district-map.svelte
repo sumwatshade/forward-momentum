@@ -3,7 +3,7 @@
     import DistrictForm from '../components/DistrictForm.svelte';
 
     async function onSubmit(state, district) {
-      await goto(`representatives/${state.toLowerCase()}/${district.toLowerCase()}`);
+      await goto(`representatives/${state.toLowerCase()}?rep_id=${district.toLowerCase()}`);
     }
 
 const seoDescription = 'Find your district representative using a map of the United States districts';

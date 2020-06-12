@@ -1,14 +1,13 @@
 <script context="module">
   export async function preload({ params }) {
-    const [state, district] = params.state;
+    const [state] = params.state;
     const res = await this.fetch(`representatives/state/${state}.json`);
     const data = await res.json();
-
+  
     if (res.status === 200) {
       return {
         reps: data,
         state: state.toUpperCase(),
-        district,
       };
     }
 
@@ -26,8 +25,8 @@
 
   export let reps;
   export let state;
-  export let district;
-
+  let district;
+  
   let warning = false;
   const houseRefs = {};
   const senate = [];
@@ -43,6 +42,17 @@
   const houseToken = house.length > 1 ? `${house.length} House Representatives` : 'One House Representative';
 
   onMount(() => {
+    const params = window.location.search.substring(1).split('&');
+
+    params.some((param) => {
+      const pair = param.split('=');
+      if (decodeURIComponent(pair[0]) === 'rep_id') {
+        district = decodeURIComponent(pair[1]);
+        return true;
+      }
+      return false;
+    });
+
     if (district && houseRefs[district]) {
       houseRefs[district].showPopup();
     } else if (district) {
