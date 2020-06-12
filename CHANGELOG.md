@@ -1,3 +1,24 @@
+# v0.4.0 (Fri Jun 12 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot)), for all your work!
+
+#### 🐛 Bug Fix
+
+- fix: add metadata [#26](https://github.com/lshadler/forward-momentum/pull/26) ([@lshadler](https://github.com/lshadler))
+- chore(deps): pin dependencies [#24](https://github.com/lshadler/forward-momentum/pull/24) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- chore: create jest testing [#19](https://github.com/lshadler/forward-momentum/pull/19) ([@lshadler](https://github.com/lshadler))
+- fix: stub google analytics in cypress testing [#23](https://github.com/lshadler/forward-momentum/pull/23) ([@lshadler](https://github.com/lshadler))
+
+#### Authors: 3
+
+- [@renovate[bot]](https://github.com/renovate[bot])
+- Lucas Shadler ([@lshadler](https://github.com/lshadler))
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.3.3 (Fri Jun 12 2020)
 
 :tada: This release contains work from a new contributor! :tada:
