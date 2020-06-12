@@ -11,7 +11,13 @@
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
 
-module.exports = (/* on, config */) => {
+module.exports = (on/* , config */) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
+  on('before:browser:launch', (browser, launchOptions) => {
+    if (browser.family === 'chromium') {
+      launchOptions.args.push('--enable-logging', '--v=1');
+    }
+    return launchOptions;
+  });
 };

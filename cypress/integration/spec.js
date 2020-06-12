@@ -6,6 +6,14 @@ function makeDesktop() {
   cy.viewport(1280, 743);
 }
 
+Cypress.on('window:before:load', (win) => {
+  // because this is called before any scripts
+  // have loaded - the ga function is undefined
+  // so we need to create it.
+  // eslint-disable-next-line no-param-reassign
+  win.ga = cy.stub().as('ga');
+});
+
 describe('Sapper template app', () => {
   beforeEach(() => {
     makeDesktop();
