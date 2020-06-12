@@ -47,21 +47,23 @@ const seoImage = 'flag.png';
 </svelte:head>
 
 
-<h1 data-automation="district-map-title">District Map</h1>
+<h1 class="block w-full text-center text-grey-darkest mb-6 text-5xl" data-automation="district-map-title">District Map</h1>
 
-<p>We have embedded a map from GovTrack in order to support clarity on who your representatives are. If you want a more accurate idea of what your representative is involved in, please follow the instructions immediately following the map.</p>
+<p class="text-lg">We have embedded a map from GovTrack in order to support clarity on who your representatives are. If you want a more accurate idea of what your representative is involved in, please follow the instructions immediately following the map.</p>
 
 
 <iframe title="district map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
 src="https://www.govtrack.us/congress/members/embed/mapframe?&bounds=-158.518,57.386,-18.119,9.295"></iframe>
 
-<p>To find more info on your representative, please try the following:</p>
 
-<ul>
-    <li>Locate your residence on the map</li>
-    <li>Fill out the form below with your state code and district number</li>
-    <li>Click 'Show Representative' to navigate to your representative</li>
-</ul>
+<div class="my-2 rounded-md mb-6 bg-democrat text-lg text-white font-semibold p-4 lg:px-4">
+  <p class="w-full text-center text-xl mb-4">To find more info on your representative, please try the following:</p>
+  <ul class="list-disc list-inside">
+      <li>Locate your residence on the map</li>
+      <li>Fill out the form below with your state code and district number</li>
+      <li>Click 'Show Representative' to navigate to your representative</li>
+  </ul>
+</div>
 
 <DistrictForm {onSubmit} />
 

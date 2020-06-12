@@ -7,3 +7,4 @@ yarn-error.log
 .eslintcache
 coverage/*
 coverage/lcov-report/*
+static/index.css

@@ -3,9 +3,11 @@
   "description": "TODO",
   "version": "0.0.1",
   "scripts": {
+    "watch:tailwind": "postcss static/tailwind.css -o static/index.css -w",
+    "build:tailwind": "NODE_ENV=production postcss static/tailwind.css -o static/index.css",
     "dev": "sapper dev",
-    "build": "sapper build --legacy",
-    "export": "sapper export --legacy",
+    "build": "yarn build:tailwind && sapper build --legacy",
+    "export": "yarn build:tailwind && sapper export --legacy",
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
@@ -18,6 +20,7 @@
     "release": "auto shipit"
   },
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^2.2.0",
     "compression": "1.7.4",
     "congress-legislators": "https://github.com/unitedstates/congress-legislators.git",
     "polka": "next",
@@ -58,11 +61,13 @@
     "jest": "26.0.1",
     "lint-staged": "10.2.10",
     "npm-run-all": "4.1.5",
+    "postcss-cli": "^7.1.1",
     "rollup": "2.15.0",
     "rollup-plugin-svelte": "5.2.2",
     "rollup-plugin-terser": "6.1.0",
     "sapper": "0.27.15",
     "svelte": "3.23.2",
-    "svelte-jester": "1.0.6"
+    "svelte-jester": "1.0.6",
+    "tailwindcss": "^1.4.6"
   }
 }
