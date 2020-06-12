@@ -81,7 +81,7 @@ describe('Sapper template app', () => {
     cy.get('[data-automation=district-map-form-district-code]').type('53');
     cy.get('[data-automation=district-map-form-submit]').click();
 
-    cy.url().should('include', '/representatives/ca/53');
+    cy.url().should('include', '/representatives/ca?rep_id=53');
     cy.get('[data-automation=rep-info-fullname]').should('have.html', 'Susan A. Davis');
     cy.get('[data-automation=invalid-rep-warning]').should('not.exist');
   });
@@ -93,7 +93,7 @@ describe('Sapper template app', () => {
     cy.get('[data-automation=district-map-form-district-code]').type('111');
     cy.get('[data-automation=district-map-form-submit]').click();
 
-    cy.url().should('include', '/representatives/ca/111');
+    cy.url().should('include', '/representatives/ca?rep_id=111');
     cy.get('[data-automation=invalid-rep-warning]').should('exist');
   });
 
@@ -104,7 +104,7 @@ describe('Sapper template app', () => {
     cy.get('[data-automation=district-map-form-district-code]').type('111');
     cy.get('[data-automation=district-map-form-submit]').click();
 
-    cy.url().should('include', '/representatives/ca/111');
+    cy.url().should('include', '/representatives/ca?rep_id=111');
     cy.get('[data-automation=invalid-rep-warning]').should('exist');
     cy.get('[data-automation=invalid-rep-warning] a').click();
 
@@ -112,7 +112,7 @@ describe('Sapper template app', () => {
     cy.get('[data-automation=district-map-form-district-code]').type('53');
     cy.get('[data-automation=district-map-form-submit]').click();
 
-    cy.url().should('include', '/representatives/ca/53');
+    cy.url().should('include', '/representatives/ca?rep_id=53');
     cy.get('[data-automation=rep-info-fullname]').should(
       'have.html',
       'Susan A. Davis',
