@@ -1,3 +1,21 @@
+# v0.4.2 (Fri Jun 12 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot)), for all your work!
+
+#### 🐛 Bug Fix
+
+- fix: sanitize state urls [#28](https://github.com/lshadler/forward-momentum/pull/28) ([@lshadler](https://github.com/lshadler))
+- chore(deps): update dependency @testing-library/jest-dom to v5.10.0 [#25](https://github.com/lshadler/forward-momentum/pull/25) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 2
+
+- Lucas Shadler ([@lshadler](https://github.com/lshadler))
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.4.1 (Fri Jun 12 2020)
 
 #### 🐛 Bug Fix
