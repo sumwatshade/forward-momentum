@@ -19,7 +19,7 @@ const seoKeywords = [
 ].join(',');
 const seoUrl = 'https://whoaremyrepresentatives.us/district-map';
 // TODO: add state-level seo image
-const seoImage = null;
+const seoImage = 'flag.png';
 </script>
 
 <svelte:head>
