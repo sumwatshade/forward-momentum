@@ -144,7 +144,7 @@
       background: linear-gradient(315deg,rgba(178,34,52,1) 0%, rgba(178,34,52,1) ${getRatio(state) - 1}%, rgba(60,59,110,1) ${getRatio(state) + 1}%,  rgba(60,59,110,1) 100%)
     `}>
       <div class={`state ${state.numDem > state.numRep ? 'dem' : 'rep'}`} on:click={onClick(state)}>
-          <a rel='prefetch' href='representatives/{state.id}'>{state.id.toUpperCase()}</a>
+          <a rel='prefetch' href='representatives/{state.id.toLowerCase()}'>{state.id.toUpperCase()}</a>
           <div class="num-dem dem">{state.numDem}</div>
           <div class="num-rep rep">{state.numRep}</div>
       </div>
