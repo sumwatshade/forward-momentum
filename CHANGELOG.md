@@ -1,3 +1,19 @@
+# v0.3.3 (Fri Jun 12 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot)), for all your work!
+
+#### 🐛 Bug Fix
+
+- Update dependency lint-staged to v10.2.10 [#22](https://github.com/lshadler/forward-momentum/pull/22) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.3.2 (Thu Jun 11 2020)
 
 :tada: This release contains work from a new contributor! :tada:
