@@ -13,62 +13,40 @@ const { name, term, id } = rep;
 const fullName = name.official_full || `${name.first} ${name.last}`;
 const title = term.type === 'sen' ? 'Senator' : 'Representative';
 const districtInfo = term.type === 'sen' || term.district === 0 ? '' : `, District ${term.district}`;
-
+const party = typeof term.party === 'string' ? term.party.toLowerCase() : '';
 export const showPopup = () => {
   open(RepInfo, { data: rep, state });
+};
+
+const onKeyPress = (e) => {
+  if (e.key === 'Enter') {
+    showPopup();
+  }
 };
 
 </script>
 
 <style>
-.container {
-  margin: 20px;
-  padding: 20px;
-  width: 225px;
-  flex-grow: 0;
-  border: 1px solid black;
-  border-radius: 3px;
-  transition: background-color 0.3s;
-}
-
-.container:hover {
-  background-color: #bfbfbf;
-  margin: 20px;
-  padding: 20px;
-  min-width: 200px;
-  border: 1px solid black;
-  border-radius: 3px;
-}
-
-@media(max-width: 620px) {
-  .container {
-    width: 100%;
+  .rep-card {
+    width: 225px;
   }
-}
-
-.republican {
-  color: #B22234;
-  border-color: #B22234;
-}
-
-.democrat {
-  color: #3C3B6E;
-  border-color: #3C3B6E;
-}
-
-
-
-.image {
-  height: 100%;
-  width: 100%;
-}
-
 </style>
 
-
-<div data-automation={`rep-${id.bioguide}`} in:fade on:click={showPopup} class={`container ${term.party.toLowerCase()}`}>
+<div 
+  tabIndex="0" 
+  data-automation={`rep-${id.bioguide}`} 
+  on:click={showPopup} 
+  on:keypress={onKeyPress} 
+  in:fade 
+  class={`rep-card hover:shadow-outline focus:shadow-outline rounded overflow-hidden shadow-lg cursor-pointer content-center flex flex-col border border-2 border-${party} text-${party}`}>
   <RepImage {fullName} {id} hideOnMobile={true}/>
-  <h2>{fullName}</h2>
-  <h3>{title}{districtInfo}</h3>
-  <h4>{term.party}</h4>
+  <div class="px-6 py-4">
+    <div class="font-bold text-xl mb-2">{fullName}</div>
+    <p class="text-gray-700 text-base">
+      {title}{districtInfo}
+    </p>
+  </div>
+  <div class="px-6 py-4">
+    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">{term.party}</span>
+  </div>
 </div>

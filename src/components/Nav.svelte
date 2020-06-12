@@ -173,17 +173,12 @@ nav {
   .navbar-list {
     background: linear-gradient(315deg, rgba(60,59,110,0) 0%, rgba(178,34,52,1) 100%);
     display: flex;
-    flex-basis: 250px;
     padding-left: 10px;
     padding-right: 225px;
   }
 
   .inner {
     padding-left: 0;
-  }
-
-  .navbar-list a {
-    display: inline-flex;
   }
 }
 
@@ -202,7 +197,7 @@ nav {
     <ul class={`navbar-list${showMobileMenu ? ' mobile' : ''}`}>
       {#each navItems as item}
         <li>
-          <a on:click={showMobileMenu ? handleMobileIconClick : ''} aria-current="{segment === item.ariaCurrent ? 'page' : undefined}" href={item.href}>{item.label}</a>
+          <a class="" on:click={showMobileMenu ? handleMobileIconClick : ''} aria-current="{segment === item.ariaCurrent ? 'page' : undefined}" href={item.href}>{item.label}</a>
         </li>
       {/each}
     </ul>

@@ -76,15 +76,6 @@
   const seoImage = null;
 </script>
 
-<style>
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 10px;
-}
-
-</style>
-
 <svelte:head>
   <title>{seoTitle}</title>
   <meta name="description" content={seoDescription} />
@@ -114,10 +105,10 @@
     <InvalidRepWarning {district} />
   {/if}
 
-  <h1>{codeToStateMap[state]}</h1>
+  <h1 class="block w-full text-center text-grey-darkest mb-6 text-5xl">{codeToStateMap[state]}</h1>
   {#if senate.length}
-    <h2>US Senators</h2>
-    <div class="grid">
+    <h2 class="block w-full text-center text-grey-darkest mb-6 text-3xl">US Senators</h2>
+    <div class="grid gap-4 grid-cols-1 sm:grid-cols-2">
       {#each senate as rep}
         <!-- we're using the non-standard `rel=prefetch` attribute to
                 tell Sapper to load the data for the page as soon as
@@ -129,8 +120,8 @@
   {/if}
 
   {#if house.length}
-    <h2>{houseToken}</h2>
-    <div class="grid">
+    <h2 class="block w-full text-center text-grey-darkest my-6 text-3xl">{houseToken}</h2>
+    <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
       {#each house as rep}
         <!-- we're using the non-standard `rel=prefetch` attribute to
                 tell Sapper to load the data for the page as soon as

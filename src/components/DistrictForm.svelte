@@ -49,11 +49,6 @@
 		border-width: 2px;
 	}
 	
-	.validation-hint {
-		color: #B22234;
-		padding: 6px 0;
-	}
-	
 	.field-danger {
 		border-color: #B22234;
 	}
@@ -83,21 +78,10 @@
         opacity: 0.6;
     }
 
-    button {
-        width: 100%;
-        background-color: #3C3B6E;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-
 </style>
 
 <form>
-<label for='state'>State Code</label>
+<label class="block text-gray-700 text-sm font-bold mb-2" for='state'>State Code</label>
 <input 
     id="state"
     data-automation="district-map-form-state-code"
@@ -111,18 +95,19 @@
     on:focus={handleFocus('state')}
     on:blur={handleBlur('state')}>
 {#if !editing.state && $stateValidity.dirty && !$stateValidity.valid}
-<span class="validation-hint">
+<span class="text-republican text-md italic">
 	{$stateValidity.message}
 </span>
 {/if}
 
-<label for='district'>District Code</label>
+<label class="block text-gray-700 text-sm font-bold mb-2" for='district'>District Code</label>
 <input 
     id='district'
     type="text"
     placeholder="11" 
     data-automation="district-map-form-district-code"
     bind:value={district}
+    class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
     class:field-danger={!editing.district && !$districtValidity.valid}
     class:field-success={!editing.district && $districtValidity.valid}
     use:districtValidate={district}
@@ -130,13 +115,14 @@
     on:blur={handleBlur('district')}>
 
 {#if !editing.district && !$districtValidity.dirty && !$districtValidity.valid}
-<span class="validation-hint">
+<span class="text-republican text-md italic">
 	{$districtValidity.message}
 </span>
 {/if}
 
 <button 
     data-automation="district-map-form-submit"
+    class="bg-democrat hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
     on:click|preventDefault={onClick} 
     on:keydown|preventDefault={onKeyPress} 
     disabled={!$stateValidity.valid || !$districtValidity.valid}>Show Representative</button>

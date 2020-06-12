@@ -44,28 +44,15 @@
   z-index: 9;
   border: 1px solid black;
   border-radius: 3px;
-    
-  min-width: 60px;
-	min-height: 60px;
-  max-width: 100px;
-	max-height: 100px;
-
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;  
-  padding: 20px;
   font-size: 2rem;
-
-  background: #ffffff;
   opacity: 1;
   transition: opacity 0.3s ease;
 
   cursor: pointer;
 }
 
-.state:hover {
+.state:hover,
+.state:focus {
   opacity: 0.5;
 }
 
@@ -93,14 +80,12 @@
   align-self: flex-end;
   bottom: 3px;
   right: 6px;
-  font-size: 0.7em;
 }
 
 .num-dem {
   position: absolute;
   top: 3px;
   left: 6px;
-  font-size: 0.7em;
 }
 
 </style>
@@ -129,24 +114,26 @@
   {/if}
 </svelte:head>
 
-<div class="container">
-	<h1>Who are my representatives?</h1>
-	<p>Get more info on the members of Congress that represent you.</p>
-	<p>Don't know your district? Check out our <a href="district-map">district map</a>!</p>
-    <h2>Select your state code from the grid below:</h2>
-    <div class="grid">
+<div class="flex flex-col items-center h-screen w-full">
+	<h1 class="block w-full text-center text-grey-darkest mb-6 text-5xl">Who are my representatives?</h1>
+	<p class="font-semibold mb-6 text-left flex-auto">Get more info on the members of Congress that represent you.</p>
+  <div class="my-2 rounded-md mb-6 bg-democrat text-center p-4 lg:px-4">
+      <span class="font-semibold text-left text-white flex-auto">Don't know your district? Check out our <a class="underline" href="district-map">district map</a>!</span>
+  </div>
+  <h2 class="block w-full text-center text-grey-darkest mb-0 text-3xl">Select your state code from the grid below:</h2>
+  <div class="grid grid-flow-row grid-flow-col gap-4 grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10">
 	{#each states as state}
 		<!-- we're using the non-standard `rel=prefetch` attribute to
 				tell Sapper to load the data for the page as soon as
 				the user hovers over the link or taps it, instead of
 				waiting for the 'click' event -->
-		<div data-automation={`state-${state.id}`} in:fade class={'border-wrap'} style={`
+		<div data-automation={`state-${state.id}`} in:fade class="border-wrap" style={`
       background: linear-gradient(315deg,rgba(178,34,52,1) 0%, rgba(178,34,52,1) ${getRatio(state) - 1}%, rgba(60,59,110,1) ${getRatio(state) + 1}%,  rgba(60,59,110,1) 100%)
     `}>
-      <div class={`state ${state.numDem > state.numRep ? 'dem' : 'rep'}`} on:click={onClick(state)}>
-          <a rel='prefetch' href='representatives/{state.id.toLowerCase()}'>{state.id.toUpperCase()}</a>
-          <div class="num-dem dem">{state.numDem}</div>
-          <div class="num-rep rep">{state.numRep}</div>
+      <div tabindex="0" class={`w-32 h-32 p-5 flex flex-row content-center justify-center bg-white state ${state.numDem > state.numRep ? 'dem' : 'rep'}`} on:click={onClick(state)}>
+          <a tabindex="-1" rel='prefetch' class="m-auto text-4xl hover:outline-none focus:outline-none" href='representatives/{state.id.toLowerCase()}'>{state.id.toUpperCase()}</a>
+          <div class="text-2xl num-dem dem">{state.numDem}</div>
+          <div class="text-2xl num-rep rep">{state.numRep}</div>
       </div>
     </div>
 	{/each}

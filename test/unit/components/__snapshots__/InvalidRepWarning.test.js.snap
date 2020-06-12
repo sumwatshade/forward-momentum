@@ -1,5 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`InvalidRepWarning matches snapshot 1`] = `"<div><div data-automation=\\"invalid-rep-warning\\" class=\\"warning svelte-1jz5mh7\\"><p>You requested district <strong>undefined</strong>, which could not be found. Search for your representative below...</p> <a href=\\"district-map\\">... or click here to go back to the map</a></div></div>"`;
+exports[`InvalidRepWarning matches snapshot 1`] = `"<div><div data-automation=\\"invalid-rep-warning\\" class=\\"bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4\\" role=\\"alert\\"><p>You requested district <span class=\\"font-bold\\">undefined</span>, which could not be found. Search for your representative below..</p> <a href=\\"district-map\\">... or click here to go back to the map</a></div></div>"`;
 
-exports[`InvalidRepWarning matches snapshot 2`] = `"<div><div data-automation=\\"invalid-rep-warning\\" class=\\"warning svelte-1jz5mh7\\"><p>You requested district <strong>10</strong>, which could not be found. Search for your representative below...</p> <a href=\\"district-map\\">... or click here to go back to the map</a></div></div>"`;
+exports[`InvalidRepWarning matches snapshot 2`] = `"<div><div data-automation=\\"invalid-rep-warning\\" class=\\"bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4\\" role=\\"alert\\"><p>You requested district <span class=\\"font-bold\\">10</span>, which could not be found. Search for your representative below..</p> <a href=\\"district-map\\">... or click here to go back to the map</a></div></div>"`;
