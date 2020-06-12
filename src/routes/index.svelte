@@ -127,7 +127,7 @@
 				tell Sapper to load the data for the page as soon as
 				the user hovers over the link or taps it, instead of
 				waiting for the 'click' event -->
-		<div data-automation={`focus:shadow-outline state-${state.id}`} in:fade class="border-wrap" style={`
+		<div data-automation={`state-${state.id}`} in:fade class="border-wrap" style={`
       background: linear-gradient(315deg,rgba(178,34,52,1) 0%, rgba(178,34,52,1) ${getRatio(state) - 1}%, rgba(60,59,110,1) ${getRatio(state) + 1}%,  rgba(60,59,110,1) 100%)
     `}>
       <div tabindex="0" class={`w-32 h-32 p-5 flex flex-row content-center justify-center bg-white state ${state.numDem > state.numRep ? 'dem' : 'rep'}`} on:click={onClick(state)}>

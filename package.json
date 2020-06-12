@@ -11,7 +11,7 @@
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
-    "test": "yarn test:unit",
+    "test": "yarn lint && yarn test:unit && yarn test:e2e:ci",
     "test:unit": "jest test",
     "test:unit:watch": "yarn test -- --watch",
     "lint": "eslint --ext .js --ext .svelte src cypress --cache=true",
