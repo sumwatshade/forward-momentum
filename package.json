@@ -16,6 +16,7 @@
     "test:unit:watch": "yarn test -- --watch",
     "lint": "eslint --ext .js --ext .svelte src cypress --cache=true",
     "test:e2e": "run-p --race dev cy:open",
+    "pretest:e2e:ci": "yarn build:tailwind",
     "test:e2e:ci": "run-p --race dev cy:run",
     "release": "auto shipit"
   },
@@ -59,6 +60,7 @@
     "eslint-plugin-svelte3": "2.7.3",
     "husky": "4.2.5",
     "jest": "26.0.1",
+    "jest-junit": "10.0.0",
     "lint-staged": "10.2.10",
     "npm-run-all": "4.1.5",
     "postcss-cli": "^7.1.1",

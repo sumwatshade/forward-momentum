@@ -31,7 +31,7 @@ describe('Sapper template app', () => {
     );
     cy.get('[data-automation=state-ca]').click();
 
-    cy.url().should('include', '/representatives/ca');
+    cy.url({ timeout: 30000 }).should('include', '/representatives/ca');
     cy.contains('h1', 'California');
     cy.get('[data-automation=rep-D000598]').should('exist');
     cy.get('[data-automation=rep-D000598] img').should('be.visible');
@@ -51,7 +51,7 @@ describe('Sapper template app', () => {
     );
     cy.get('[data-automation=state-ca]').click();
 
-    cy.url().should('include', '/representatives/ca');
+    cy.url({ timeout: 30000 }).should('include', '/representatives/ca');
     cy.get('[data-automation=rep-D000598]').should('exist');
     cy.get('[data-automation=rep-D000598] img').should('not.be.visible');
     cy.get('[data-automation=rep-D000598]').click();
@@ -64,7 +64,7 @@ describe('Sapper template app', () => {
 
   it('navigates to /about', () => {
     cy.get('nav a').contains('about').click();
-    cy.url().should('include', '/about');
+    cy.url({ timeout: 30000 }).should('include', '/about');
     cy.get('[data-automation=about-title]').should('have.html', 'About this site');
   });
 
@@ -76,7 +76,7 @@ describe('Sapper template app', () => {
 
   it('fills out form with representative data', () => {
     cy.get('nav a').contains('district map').click();
-    cy.url().should('include', '/district-map');
+    cy.url({ timeout: 30000 }).should('include', '/district-map');
     cy.get('[data-automation=district-map-form-state-code]').type('ca');
     cy.get('[data-automation=district-map-form-district-code]').type('53');
     cy.get('[data-automation=district-map-form-submit]').click();
@@ -99,12 +99,15 @@ describe('Sapper template app', () => {
 
   it('fills out form with bad representative data, then fixes', () => {
     cy.get('nav a').contains('district map').click();
-    cy.url().should('include', '/district-map');
+    cy.url({ timeout: 30000 }).should('include', '/district-map');
     cy.get('[data-automation=district-map-form-state-code]').type('ca');
     cy.get('[data-automation=district-map-form-district-code]').type('111');
     cy.get('[data-automation=district-map-form-submit]').click();
 
-    cy.url().should('include', '/representatives/ca?rep_id=111');
+    cy.url({ timeout: 30000 }).should(
+      'include',
+      '/representatives/ca?rep_id=111',
+    );
     cy.get('[data-automation=invalid-rep-warning]').should('exist');
     cy.get('[data-automation=invalid-rep-warning] a').click();
 
@@ -112,7 +115,10 @@ describe('Sapper template app', () => {
     cy.get('[data-automation=district-map-form-district-code]').type('53');
     cy.get('[data-automation=district-map-form-submit]').click();
 
-    cy.url().should('include', '/representatives/ca?rep_id=53');
+    cy.url({ timeout: 30000 }).should(
+      'include',
+      '/representatives/ca?rep_id=53',
+    );
     cy.get('[data-automation=rep-info-fullname]').should(
       'have.html',
       'Susan A. Davis',

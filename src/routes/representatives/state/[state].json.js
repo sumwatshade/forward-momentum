@@ -34,17 +34,39 @@ export const states = Array.from(lookup.keys()).sort((a, b) => {
 }).map((state) => {
   const reps = lookup.get(state);
   let numDem = 0;
+  let numLib = 0;
+  let numInd = 0;
+  let numRep = 0;
   reps.forEach((r) => {
-    if (r.term.party === 'Democrat') {
-      numDem += 1;
+    switch (r.term.party) {
+      case 'Democrat': {
+        numDem += 1;
+        break;
+      }
+      case 'Republican': {
+        numRep += 1;
+        break;
+      }
+      case 'Libertarian': {
+        numLib += 1;
+        break;
+      }
+      case 'Independent': {
+        numInd += 1;
+        break;
+      }
+      default: {
+        throw new Error(`Unhandled party: ${r.term.party}`);
+      }
     }
   });
-  const numRep = reps.length - numDem;
 
   return {
     id: state,
     numDem,
     numRep,
+    numLib,
+    numInd,
   };
 });
 

@@ -17,4 +17,5 @@ module.exports = {
     '!src/components/Modal.svelte',
     '!src/components/DistrictForm.svelte',
   ],
+  reporters: ['default', ['jest-junit', { outputDirectory: 'coverage/junit' }]],
 };

@@ -77,7 +77,7 @@ jobs:
       - store_artifacts:
           path: coverage
       - store_test_results:
-          path: coverage
+          path: coverage/junit/
   test-integration:
     docker:
       - image: circleci/node:dubnium-browsers
@@ -95,7 +95,13 @@ jobs:
           name: Cypress Testing
           command: yarn test:e2e:ci
       - store_artifacts:
-          path: coverage
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
+      - store_test_results:
+          path: cypress/videos
+      - store_test_results:
+          path: cypress/screenshots
   release:
     docker:
       - image: circleci/node:dubnium-browsers

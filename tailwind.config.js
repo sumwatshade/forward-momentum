@@ -17,6 +17,8 @@ module.exports = {
       colors: {
         republican: '#B22234',
         democrat: '#3C3B6E',
+        libertarian: '#B07600',
+        independent: '#800080',
       },
     },
   },

@@ -38,7 +38,7 @@ const onKeyPress = (e) => {
   on:click={showPopup} 
   on:keypress={onKeyPress} 
   in:fade 
-  class={`rep-card hover:shadow-outline focus:shadow-outline rounded overflow-hidden shadow-lg cursor-pointer content-center flex flex-col border border-2 border-${party} text-${party}`}>
+  class={`rep-card hover:shadow-outline focus:shadow-outline rounded overflow-hidden shadow-lg cursor-pointer content-center flex flex-col border border-2 border-${party}`}>
   <RepImage {fullName} {id} hideOnMobile={true}/>
   <div class="px-6 py-4">
     <div class="font-bold text-xl mb-2">{fullName}</div>
@@ -47,6 +47,6 @@ const onKeyPress = (e) => {
     </p>
   </div>
   <div class="px-6 py-4">
-    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">{term.party}</span>
+    <span class={`inline-block bg-${party} rounded-full px-3 py-1 text-sm font-semibold text-${party === 'libertarian' ? 'gray-700' : 'white'} mr-2`}>{term.party}</span>
   </div>
 </div>
