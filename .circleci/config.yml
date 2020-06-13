@@ -75,9 +75,9 @@ jobs:
       #     name: Upload coverage
       #     command: bash <(curl -s https://codecov.tools.a.intuit.com/bash)  -X s3
       - store_artifacts:
-          path: coverage
+          path: coverage/junit/
       - store_test_results:
-          path: coverage
+          path: coverage/junit/
   test-integration:
     docker:
       - image: circleci/node:dubnium-browsers
