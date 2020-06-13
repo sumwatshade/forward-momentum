@@ -16,6 +16,7 @@
     "test:unit:watch": "yarn test -- --watch",
     "lint": "eslint --ext .js --ext .svelte src cypress --cache=true",
     "test:e2e": "run-p --race dev cy:open",
+    "pretest:e2e:ci": "yarn build:tailwind",
     "test:e2e:ci": "run-p --race dev cy:run",
     "release": "auto shipit"
   },
