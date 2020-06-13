@@ -21,7 +21,7 @@
     "release": "auto shipit"
   },
   "dependencies": {
-    "@fullhuman/postcss-purgecss": "2.2.0",
+    "@fullhuman/postcss-purgecss": "2.3.0",
     "compression": "1.7.4",
     "congress-legislators": "https://github.com/unitedstates/congress-legislators.git",
     "polka": "next",
