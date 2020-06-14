@@ -1,3 +1,30 @@
+# v0.6.0 (Sun Jun 14 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot)), for all your work!
+
+#### 🚀 Enhancement
+
+- feat: badge styling [#36](https://github.com/lshadler/forward-momentum/pull/36) ([@lshadler](https://github.com/lshadler))
+
+#### 🐛 Bug Fix
+
+- fix(deps): update dependency @fullhuman/postcss-purgecss to v2.3.0 [#38](https://github.com/lshadler/forward-momentum/pull/38) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- chore(deps): update dependency @testing-library/jest-dom to v5.10.1 [#40](https://github.com/lshadler/forward-momentum/pull/40) ([@renovate-bot](https://github.com/renovate-bot))
+- chore(deps): update dependency rollup to v2.16.1 [#39](https://github.com/lshadler/forward-momentum/pull/39) ([@renovate-bot](https://github.com/renovate-bot))
+- chore(deps): update dependency rollup to v2.16.0 [#30](https://github.com/lshadler/forward-momentum/pull/30) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- chore(deps): pin dependencies [#37](https://github.com/lshadler/forward-momentum/pull/37) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- chore(deps): pin dependencies [#34](https://github.com/lshadler/forward-momentum/pull/34) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+
+#### Authors: 3
+
+- [@renovate[bot]](https://github.com/renovate[bot])
+- Lucas Shadler ([@lshadler](https://github.com/lshadler))
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.5.0 (Fri Jun 12 2020)
 
 :tada: This release contains work from a new contributor! :tada:
