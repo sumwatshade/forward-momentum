@@ -1,3 +1,23 @@
+# v0.6.11 (Mon Jun 22 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot)), for all your work!
+
+#### 🐛 Bug Fix
+
+- Update dependency sirv to v1.0.1 [#44](https://github.com/lshadler/forward-momentum/pull/44) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency jest-junit to v11 [#49](https://github.com/lshadler/forward-momentum/pull/49) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency @rollup/plugin-node-resolve to v8.1.0 [#55](https://github.com/lshadler/forward-momentum/pull/55) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency @rollup/plugin-babel to v5.0.4 [#56](https://github.com/lshadler/forward-momentum/pull/56) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+
+#### Authors: 2
+
+- [@renovate[bot]](https://github.com/renovate[bot])
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.10 (Mon Jun 22 2020)
 
 :tada: This release contains work from a new contributor! :tada:
