@@ -51,7 +51,7 @@
     "babel-jest": "26.1.0",
     "babel-plugin-remove-attribute": "1.0.0",
     "contact-congress": "https://github.com/unitedstates/contact-congress.git",
-    "cypress": "4.8.0",
+    "cypress": "4.9.0",
     "eslint": "7.3.1",
     "eslint-config-airbnb-base": "14.1.0",
     "eslint-plugin-cypress": "2.11.1",
