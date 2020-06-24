@@ -1,3 +1,20 @@
+# v0.6.17 (Wed Jun 24 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot)), for all your work!
+
+#### 🐛 Bug Fix
+
+- Update commitlint monorepo to v9 (major) [#52](https://github.com/lshadler/forward-momentum/pull/52) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+
+#### Authors: 2
+
+- [@renovate[bot]](https://github.com/renovate[bot])
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.16 (Tue Jun 23 2020)
 
 :tada: This release contains work from a new contributor! :tada:
