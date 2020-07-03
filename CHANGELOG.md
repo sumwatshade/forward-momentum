@@ -1,3 +1,19 @@
+# v0.6.27 (Fri Jul 03 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot)), for all your work!
+
+#### 🐛 Bug Fix
+
+- Update dependency eslint to v7.4.0 [#70](https://github.com/lshadler/forward-momentum/pull/70) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.26 (Thu Jul 02 2020)
 
 :tada: This release contains work from a new contributor! :tada:
