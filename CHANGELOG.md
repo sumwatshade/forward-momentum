@@ -1,3 +1,19 @@
+# v0.6.32 (Tue Jul 07 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot)), for all your work!
+
+#### 🐛 Bug Fix
+
+- Update dependency cypress to v4.10.0 [#76](https://github.com/lshadler/forward-momentum/pull/76) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.31 (Mon Jul 06 2020)
 
 :tada: This release contains work from a new contributor! :tada:
