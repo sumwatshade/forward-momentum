@@ -1,3 +1,20 @@
+# v0.6.39 (Sun Jul 12 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot)), for all your work!
+
+#### 🐛 Bug Fix
+
+- Update dependency @rollup/plugin-node-resolve to v8.4.0 [#84](https://github.com/lshadler/forward-momentum/pull/84) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency @rollup/plugin-babel to v5.1.0 [#82](https://github.com/lshadler/forward-momentum/pull/82) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.38 (Sun Jul 12 2020)
 
 :tada: This release contains work from a new contributor! :tada:
