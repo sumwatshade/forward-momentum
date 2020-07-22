@@ -1,3 +1,19 @@
+# v0.6.56 (Wed Jul 22 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot)), for all your work!
+
+#### 🐛 Bug Fix
+
+- Update dependency rollup to v2.22.2 [#102](https://github.com/lshadler/forward-momentum/pull/102) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.55 (Tue Jul 21 2020)
 
 :tada: This release contains work from a new contributor! :tada:
