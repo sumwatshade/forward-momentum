@@ -1,3 +1,19 @@
+# v0.6.61 (Sun Jul 26 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot)), for all your work!
+
+#### 🐛 Bug Fix
+
+- Update dependency eslint-plugin-jest to v23.18.2 [#107](https://github.com/lshadler/forward-momentum/pull/107) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.60 (Fri Jul 24 2020)
 
 :tada: This release contains work from a new contributor! :tada:
