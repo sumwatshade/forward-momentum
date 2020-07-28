@@ -1,3 +1,19 @@
+# v0.6.63 (Tue Jul 28 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot)), for all your work!
+
+#### 🐛 Bug Fix
+
+- Update dependency tailwindcss to v1.6.0 [#111](https://github.com/lshadler/forward-momentum/pull/111) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.62 (Mon Jul 27 2020)
 
 :tada: This release contains work from a new contributor! :tada:
