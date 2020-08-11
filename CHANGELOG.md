@@ -1,3 +1,19 @@
+# v0.6.91 (Tue Aug 11 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot)), for all your work!
+
+#### 🐛 Bug Fix
+
+- Update dependency @testing-library/jest-dom to v5.11.3 [#140](https://github.com/lshadler/forward-momentum/pull/140) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.90 (Mon Aug 10 2020)
 
 :tada: This release contains work from a new contributor! :tada:
