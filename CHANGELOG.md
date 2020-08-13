@@ -1,3 +1,19 @@
+# v0.6.95 (Thu Aug 13 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot)), for all your work!
+
+#### 🐛 Bug Fix
+
+- Update auto-monorepo to v9.50.3 [#146](https://github.com/lshadler/forward-momentum/pull/146) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.94 (Thu Aug 13 2020)
 
 :tada: This release contains work from a new contributor! :tada:
