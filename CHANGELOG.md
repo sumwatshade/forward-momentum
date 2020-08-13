@@ -1,3 +1,19 @@
+# v0.6.94 (Thu Aug 13 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot)), for all your work!
+
+#### 🐛 Bug Fix
+
+- Update dependency @rollup/plugin-babel to v5.2.0 [#144](https://github.com/lshadler/forward-momentum/pull/144) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.93 (Wed Aug 12 2020)
 
 :tada: This release contains work from a new contributor! :tada:
