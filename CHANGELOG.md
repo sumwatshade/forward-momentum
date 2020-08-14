@@ -1,3 +1,15 @@
+# v0.6.99 (Fri Aug 14 2020)
+
+#### 🐛 Bug Fix
+
+- Update auto-monorepo to v9.50.9 [#150](https://github.com/lshadler/forward-momentum/pull/150) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.98 (Fri Aug 14 2020)
 
 #### 🐛 Bug Fix
