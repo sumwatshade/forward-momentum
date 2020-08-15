@@ -1,3 +1,15 @@
+# v0.6.102 (Sat Aug 15 2020)
+
+#### 🐛 Bug Fix
+
+- Update dependency rollup to v2.26.0 [#153](https://github.com/lshadler/forward-momentum/pull/153) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.101 (Sat Aug 15 2020)
 
 #### 🐛 Bug Fix
