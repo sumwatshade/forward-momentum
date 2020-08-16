@@ -1,3 +1,15 @@
+# v0.6.104 (Sun Aug 16 2020)
+
+#### 🐛 Bug Fix
+
+- Update commitlint monorepo to v9.1.2 [#156](https://github.com/lshadler/forward-momentum/pull/156) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.103 (Sun Aug 16 2020)
 
 #### 🐛 Bug Fix
