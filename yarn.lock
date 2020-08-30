@@ -7398,6 +7398,11 @@ rimraf@^3.0.0:
   dependencies:
     glob "^7.1.3"
 
+rollup-dependency-tree@0.0.10:
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/rollup-dependency-tree/-/rollup-dependency-tree-0.0.10.tgz#03fea43f41c88c6284edb86f4d68708ec173adbc"
+  integrity sha512-xgnV7DomkPLkQDFzfa5b3JW3kLQrrY8QiI4qbz/4uBk8NPj5sTjI12xQbEIzzvrLvhUSk/3WBscSVYHkgDxmvA==
+
 rollup-plugin-svelte@5.2.3:
   version "5.2.3"
   resolved "https://registry.yarnpkg.com/rollup-plugin-svelte/-/rollup-plugin-svelte-5.2.3.tgz#efdc15e3e3fdd9b9f1100fdc14a8532b4e587bc8"
@@ -7497,13 +7502,14 @@ sapper-google-analytics@1.0.1:
   resolved "https://registry.yarnpkg.com/sapper-google-analytics/-/sapper-google-analytics-1.0.1.tgz#21ef9a488672c9c01372a6ad9e7a516598af7a00"
   integrity sha512-BC1a5TbKs4trx7mj55QTOTDppJFfUV9nc9vJ8vulEwpGwRxSaQR5rnASf+4EiDOQLT6ndWrKuepgZQz+xgQvFw==
 
-sapper@0.28.2:
-  version "0.28.2"
-  resolved "https://registry.yarnpkg.com/sapper/-/sapper-0.28.2.tgz#84a3a1a4d18c4851efde7f10f64d82bec3d15314"
-  integrity sha512-0k967n9EnGxj9t1ezuvEUFiqUI7Mr92grAJXlhRNmEfV7qvJhiTqNmN/N7GvUtz3qk4RF9u2hfQCa48ozx85GA==
+sapper@0.28.3:
+  version "0.28.3"
+  resolved "https://registry.yarnpkg.com/sapper/-/sapper-0.28.3.tgz#23370f4f805386f573e7b84e601aebe46b03ad59"
+  integrity sha512-4hQv6ApLWbYy8OPy3f9Pdxsu8eHivIFh+VAb5UZMY811aTPb20SudxZAMpdJaNYwgR3rHqRDCRllfO134XT6Nw==
   dependencies:
     html-minifier "^4.0.0"
     http-link-header "^1.0.2"
+    rollup-dependency-tree "0.0.10"
     shimport "^1.0.1"
     source-map "^0.6.1"
     sourcemap-codec "^1.4.6"
