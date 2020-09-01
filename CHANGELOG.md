@@ -1,3 +1,15 @@
+# v0.6.131 (Tue Sep 01 2020)
+
+#### 🐛 Bug Fix
+
+- Update dependency eslint to v7.8.1 [#186](https://github.com/lshadler/forward-momentum/pull/186) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.130 (Tue Sep 01 2020)
 
 #### 🐛 Bug Fix
