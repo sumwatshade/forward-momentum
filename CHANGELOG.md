@@ -1,3 +1,15 @@
+# v0.6.129 (Tue Sep 01 2020)
+
+#### 🐛 Bug Fix
+
+- Update dependency postcss-cli to v7.1.2 [#184](https://github.com/lshadler/forward-momentum/pull/184) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.128 (Mon Aug 31 2020)
 
 #### 🐛 Bug Fix
