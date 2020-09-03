@@ -1,3 +1,15 @@
+# v0.6.133 (Thu Sep 03 2020)
+
+#### 🐛 Bug Fix
+
+- Update dependency @babel/core to v7.11.6 [#187](https://github.com/lshadler/forward-momentum/pull/187) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.132 (Wed Sep 02 2020)
 
 #### 🐛 Bug Fix
