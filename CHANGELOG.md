@@ -1,3 +1,15 @@
+# v0.6.136 (Fri Sep 04 2020)
+
+#### 🐛 Bug Fix
+
+- Update dependency sapper to v0.28.4 [#189](https://github.com/lshadler/forward-momentum/pull/189) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.135 (Fri Sep 04 2020)
 
 #### 🐛 Bug Fix
