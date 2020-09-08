@@ -1,3 +1,15 @@
+# v0.6.143 (Tue Sep 08 2020)
+
+#### 🐛 Bug Fix
+
+- Update dependency tailwindcss to v1.8.5 [#198](https://github.com/lshadler/forward-momentum/pull/198) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.142 (Mon Sep 07 2020)
 
 #### 🐛 Bug Fix
