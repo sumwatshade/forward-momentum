@@ -1,3 +1,15 @@
+# v0.6.149 (Wed Sep 09 2020)
+
+#### 🐛 Bug Fix
+
+- Update dependency @rollup/plugin-babel to v5.2.1 [#204](https://github.com/lshadler/forward-momentum/pull/204) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.148 (Wed Sep 09 2020)
 
 #### 🐛 Bug Fix
