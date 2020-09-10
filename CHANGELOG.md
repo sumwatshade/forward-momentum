@@ -1,3 +1,15 @@
+# v0.6.150 (Thu Sep 10 2020)
+
+#### 🐛 Bug Fix
+
+- Update dependency svelte to v3.25.0 [#205](https://github.com/lshadler/forward-momentum/pull/205) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.149 (Wed Sep 09 2020)
 
 #### 🐛 Bug Fix
