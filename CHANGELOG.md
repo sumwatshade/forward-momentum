@@ -1,3 +1,17 @@
+# v0.6.157 (Mon Sep 21 2020)
+
+#### 🐛 Bug Fix
+
+- Update dependency rollup to v2.28.1 [#216](https://github.com/lshadler/forward-momentum/pull/216) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency rollup to v2.27.0 [#214](https://github.com/lshadler/forward-momentum/pull/214) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency sapper to v0.28.7 [#213](https://github.com/lshadler/forward-momentum/pull/213) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.156 (Tue Sep 15 2020)
 
 #### 🐛 Bug Fix
