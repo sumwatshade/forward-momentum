@@ -1,3 +1,17 @@
+# v0.6.158 (Fri Sep 25 2020)
+
+#### 🐛 Bug Fix
+
+- Update dependency sapper to v0.28.9 [#217](https://github.com/lshadler/forward-momentum/pull/217) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency svelte to v3.27.0 [#222](https://github.com/lshadler/forward-momentum/pull/222) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency svelte to v3.26.0 [#220](https://github.com/lshadler/forward-momentum/pull/220) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.157 (Mon Sep 21 2020)
 
 #### 🐛 Bug Fix
