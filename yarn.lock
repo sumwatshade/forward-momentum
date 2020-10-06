@@ -7,12 +7,17 @@
   resolved "https://registry.yarnpkg.com/@auto-it/bot-list/-/bot-list-9.54.2.tgz#4d7fc5ffe38fe56ce0639e61249fa320e15211d2"
   integrity sha512-Vq+y9FkyQWwweu4UGjXHQxiXIVZ7MXExn54F3/+3Hx/ylyuXKvOsTN9EIeQ5AkBFItpQ7Z9aXQgSoTuk/O0TcQ==
 
-"@auto-it/conventional-commits@9.54.2":
-  version "9.54.2"
-  resolved "https://registry.yarnpkg.com/@auto-it/conventional-commits/-/conventional-commits-9.54.2.tgz#53ad46f4b68cb53b3780432e547e9a8a23a7a790"
-  integrity sha512-m2igUeoHSfb8CNGYY95qLosodIHcZtmjX/miBa3z0DmXuDmZlxJCqNGQZN2l+PA0gcUnhScD9iMsiWS13Gdx9Q==
+"@auto-it/bot-list@9.54.3":
+  version "9.54.3"
+  resolved "https://registry.yarnpkg.com/@auto-it/bot-list/-/bot-list-9.54.3.tgz#afc816e423baa28692291ae483e0f7b5ff7c04a7"
+  integrity sha512-AbKmD5QNWKMz0B5WBrP2oAhTxOFNPItKOwfYY6xwmwfp+7E+g+QNFQZ885e6br4ReUuhwJmht386aL6dzmBm4A==
+
+"@auto-it/conventional-commits@9.54.3":
+  version "9.54.3"
+  resolved "https://registry.yarnpkg.com/@auto-it/conventional-commits/-/conventional-commits-9.54.3.tgz#52c76d4b686c352db33b6216e1b7b8c937129ada"
+  integrity sha512-ib7qrWDA9mPk9r7PiLyh4CXZ+WM0qg0mSDvL+rBkK5ynXfPOzCY1PHfDV05+RYS8SZL/nBipICQ6WzKSD142GQ==
   dependencies:
-    "@auto-it/core" "9.54.2"
+    "@auto-it/core" "9.54.3"
     parse-commit-message "4.0.0"
     tslib "2.0.1"
 
@@ -58,24 +63,66 @@
     typescript-memoize "^1.0.0-alpha.3"
     url-join "^4.0.0"
 
-"@auto-it/first-time-contributor@9.54.2":
-  version "9.54.2"
-  resolved "https://registry.yarnpkg.com/@auto-it/first-time-contributor/-/first-time-contributor-9.54.2.tgz#fc7ab0583ca3c1a973d6ded29544f87b36fe1404"
-  integrity sha512-rbbbb5XIAuVq+iIG9YTi5Ds0f69Pm3mwFtk1j8LwCq+QAArRNW1qQJY6FeNV2pP20zgwSYSFCC0mnUeAAAWzmQ==
+"@auto-it/core@9.54.3":
+  version "9.54.3"
+  resolved "https://registry.yarnpkg.com/@auto-it/core/-/core-9.54.3.tgz#c91f63e81daa00878ec9c1b911786ea91c6b3712"
+  integrity sha512-VuO5iLVk+bqbIcLpFH7E3noqJs/yAi21bYNs5bTQIqx/oIlugC39FaUDqEiq6dNqIdQiu1zhrL5w+RRa/51Yhg==
   dependencies:
-    "@auto-it/bot-list" "9.54.2"
-    "@auto-it/core" "9.54.2"
+    "@auto-it/bot-list" "9.54.3"
+    "@octokit/plugin-enterprise-compatibility" "^1.2.2"
+    "@octokit/plugin-retry" "^3.0.1"
+    "@octokit/plugin-throttling" "^3.2.0"
+    "@octokit/rest" "^18.0.0"
+    await-to-js "^2.1.1"
+    chalk "^4.0.0"
+    cosmiconfig "7.0.0"
+    deepmerge "^4.0.0"
+    dotenv "^8.0.0"
+    endent "^2.0.1"
+    enquirer "^2.3.4"
+    env-ci "^5.0.1"
+    fast-glob "^3.1.1"
+    fp-ts "^2.5.3"
+    fromentries "^1.2.0"
+    gitlog "^4.0.3"
+    https-proxy-agent "^5.0.0"
+    import-cwd "^3.0.0"
+    import-from "^3.0.0"
+    io-ts "^2.1.2"
+    lodash.chunk "^4.2.0"
+    log-symbols "^4.0.0"
+    node-fetch "2.6.1"
+    parse-author "^2.0.0"
+    parse-github-url "1.0.2"
+    pretty-ms "^7.0.0"
+    semver "^7.0.0"
+    signale "^1.4.0"
+    tapable "^2.0.0-beta.2"
+    terminal-link "^2.1.1"
+    tinycolor2 "^1.4.1"
+    tslib "2.0.1"
+    type-fest "^0.16.0"
+    typescript-memoize "^1.0.0-alpha.3"
+    url-join "^4.0.0"
+
+"@auto-it/first-time-contributor@9.54.3":
+  version "9.54.3"
+  resolved "https://registry.yarnpkg.com/@auto-it/first-time-contributor/-/first-time-contributor-9.54.3.tgz#44ad2731254e7a576f5ce1d468323097083bdae1"
+  integrity sha512-ABwjGaqlSYNxT3YCuBnnzqkV7nAL/KQ43eAaGwZhjwKKmF0l+RPaG5+Gq1BnELGVez5wG03JxsORS7R4VQylpA==
+  dependencies:
+    "@auto-it/bot-list" "9.54.3"
+    "@auto-it/core" "9.54.3"
     array.prototype.flatmap "^1.2.2"
     endent "^2.0.1"
     tslib "2.0.1"
     url-join "^4.0.0"
 
-"@auto-it/git-tag@9.54.2":
-  version "9.54.2"
-  resolved "https://registry.yarnpkg.com/@auto-it/git-tag/-/git-tag-9.54.2.tgz#e6d23bcc4dc38ba1e2649c90075c65cb3b384ce1"
-  integrity sha512-qQp4UugDLiUbcc6q5D49N8JAL88lPBBDX9DTCL8S8foHSZkhruf3uG7Ep0JFVVhQBgZr/aBv9LSiJVCK0vRKGw==
+"@auto-it/git-tag@9.54.3":
+  version "9.54.3"
+  resolved "https://registry.yarnpkg.com/@auto-it/git-tag/-/git-tag-9.54.3.tgz#1e409dcc011f40caddf9c34b2b495c7d5d796446"
+  integrity sha512-4xDbu4X5KkaQ3TfuDkXCzitkQpRLq1/ZjWfLOtydBOM4S97C7oM913vke5Z8Kotu5Se6a7Y5436KHLYq8Srg2A==
   dependencies:
-    "@auto-it/core" "9.54.2"
+    "@auto-it/core" "9.54.3"
     semver "^7.0.0"
     tslib "2.0.1"
 
@@ -105,6 +152,17 @@
   integrity sha512-2+ZJFypmT65g8rWkoewLz3Nwgluu9mlrdNH+nApMqq9gwln/4VKMHms7Hr1ErkAzSaLsompQ0VkPWP+IUurCXQ==
   dependencies:
     "@auto-it/core" "9.54.2"
+    deepmerge "^4.0.0"
+    fp-ts "^2.5.3"
+    io-ts "^2.1.2"
+    tslib "2.0.1"
+
+"@auto-it/released@9.54.3":
+  version "9.54.3"
+  resolved "https://registry.yarnpkg.com/@auto-it/released/-/released-9.54.3.tgz#4c42fdec7a3ad1e1def83a459e6edc1816285b49"
+  integrity sha512-tCGFdQA5GihNXPKljBkY97YS9m2MxVZDB0V/l2gr3PEx3QVbz1YfN81+2BVrJVAIKu1zSZTQ0Lc9vyAJgJOkpQ==
+  dependencies:
+    "@auto-it/core" "9.54.3"
     deepmerge "^4.0.0"
     fp-ts "^2.5.3"
     io-ts "^2.1.2"
