@@ -47,7 +47,7 @@
     "@rollup/plugin-yaml": "2.1.1",
     "@testing-library/jest-dom": "5.11.4",
     "@testing-library/svelte": "3.0.0",
-    "auto": "9.54.2",
+    "auto": "9.54.3",
     "babel-jest": "26.5.2",
     "babel-plugin-remove-attribute": "1.0.0",
     "contact-congress": "https://github.com/unitedstates/contact-congress.git",
