@@ -1,3 +1,16 @@
+# v0.6.169 (Wed Oct 07 2020)
+
+#### 🐛 Bug Fix
+
+- Update dependency tailwindcss to v1.8.12 [#239](https://github.com/lshadler/forward-momentum/pull/239) ([@renovate-bot](https://github.com/renovate-bot))
+- Update auto-monorepo to v9.54.6 [#238](https://github.com/lshadler/forward-momentum/pull/238) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.168 (Tue Oct 06 2020)
 
 #### 🐛 Bug Fix
