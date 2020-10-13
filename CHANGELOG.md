@@ -1,3 +1,17 @@
+# v0.6.173 (Tue Oct 13 2020)
+
+#### 🐛 Bug Fix
+
+- Update dependency tailwindcss to v1.9.1 [#247](https://github.com/lshadler/forward-momentum/pull/247) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency tailwindcss to v1.9.0 [#246](https://github.com/lshadler/forward-momentum/pull/246) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency jest to v26.5.3 [#244](https://github.com/lshadler/forward-momentum/pull/244) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.172 (Sat Oct 10 2020)
 
 #### 🐛 Bug Fix
