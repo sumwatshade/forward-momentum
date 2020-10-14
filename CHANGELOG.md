@@ -1,3 +1,16 @@
+# v0.6.175 (Wed Oct 14 2020)
+
+#### 🐛 Bug Fix
+
+- Update babel monorepo to v7.12.0 [#249](https://github.com/lshadler/forward-momentum/pull/249) ([@renovate-bot](https://github.com/renovate-bot))
+- Update auto-monorepo to v9.58.0 [#248](https://github.com/lshadler/forward-momentum/pull/248) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.174 (Tue Oct 13 2020)
 
 #### 🐛 Bug Fix
