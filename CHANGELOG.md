@@ -1,3 +1,17 @@
+# v0.6.179 (Fri Oct 16 2020)
+
+#### 🐛 Bug Fix
+
+- Update babel monorepo [#254](https://github.com/lshadler/forward-momentum/pull/254) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency lint-staged to v10.4.1 [#215](https://github.com/lshadler/forward-momentum/pull/215) ([@renovate-bot](https://github.com/renovate-bot))
+- Update auto-monorepo to v9.59.1 [#253](https://github.com/lshadler/forward-momentum/pull/253) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.178 (Thu Oct 15 2020)
 
 #### 🐛 Bug Fix
