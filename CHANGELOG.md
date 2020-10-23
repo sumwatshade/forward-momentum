@@ -1,3 +1,17 @@
+# v0.6.183 (Fri Oct 23 2020)
+
+#### 🐛 Bug Fix
+
+- Update dependency tailwindcss to v1.9.6 [#263](https://github.com/lshadler/forward-momentum/pull/263) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency @testing-library/jest-dom to v5.11.5 [#262](https://github.com/lshadler/forward-momentum/pull/262) ([@renovate-bot](https://github.com/renovate-bot))
+- Update jest monorepo to v26.6.1 [#258](https://github.com/lshadler/forward-momentum/pull/258) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.182 (Wed Oct 21 2020)
 
 #### 🐛 Bug Fix
