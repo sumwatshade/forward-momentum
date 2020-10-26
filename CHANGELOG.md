@@ -1,3 +1,15 @@
+# v0.6.186 (Mon Oct 26 2020)
+
+#### 🐛 Bug Fix
+
+- Update dependency lint-staged to v10.5.0 [#264](https://github.com/lshadler/forward-momentum/pull/264) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.185 (Sat Oct 24 2020)
 
 #### 🐛 Bug Fix
