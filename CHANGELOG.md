@@ -1,3 +1,15 @@
+# v0.6.187 (Tue Oct 27 2020)
+
+#### 🐛 Bug Fix
+
+- Update dependency @rollup/plugin-replace to v2.3.4 [#265](https://github.com/lshadler/forward-momentum/pull/265) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.186 (Mon Oct 26 2020)
 
 #### 🐛 Bug Fix
