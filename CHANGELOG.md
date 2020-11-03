@@ -1,3 +1,17 @@
+# v0.6.190 (Tue Nov 03 2020)
+
+#### 🐛 Bug Fix
+
+- Update dependency @babel/runtime to v7.12.5 [#275](https://github.com/lshadler/forward-momentum/pull/275) ([@renovate-bot](https://github.com/renovate-bot))
+- Update jest monorepo to v26.6.2 [#274](https://github.com/lshadler/forward-momentum/pull/274) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency lint-staged to v10.5.1 [#272](https://github.com/lshadler/forward-momentum/pull/272) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.189 (Tue Oct 27 2020)
 
 #### 🐛 Bug Fix
