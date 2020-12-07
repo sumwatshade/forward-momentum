@@ -1,3 +1,16 @@
+# v0.6.198 (Mon Dec 07 2020)
+
+#### 🐛 Bug Fix
+
+- Update jest monorepo to v26.6.3 [#276](https://github.com/lshadler/forward-momentum/pull/276) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency husky to v4.3.5 [#289](https://github.com/lshadler/forward-momentum/pull/289) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.197 (Mon Dec 07 2020)
 
 #### 🐛 Bug Fix
