@@ -1,3 +1,15 @@
+# v0.6.200 (Fri Dec 11 2020)
+
+#### 🐛 Bug Fix
+
+- Update dependency svelte-jester to v1.3.0 [#293](https://github.com/lshadler/forward-momentum/pull/293) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.199 (Thu Dec 10 2020)
 
 #### 🐛 Bug Fix
