@@ -1,3 +1,15 @@
+# v0.6.202 (Thu Jan 07 2021)
+
+#### 🐛 Bug Fix
+
+- Update dependency @babel/preset-env to v7.12.11 [#297](https://github.com/lshadler/forward-momentum/pull/297) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.201 (Thu Jan 07 2021)
 
 #### 🐛 Bug Fix
