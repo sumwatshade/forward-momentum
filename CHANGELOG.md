@@ -1,3 +1,15 @@
+# v0.6.203 (Thu Jan 07 2021)
+
+#### 🐛 Bug Fix
+
+- Update dependency @testing-library/jest-dom to v5.11.8 [#298](https://github.com/lshadler/forward-momentum/pull/298) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.202 (Thu Jan 07 2021)
 
 #### 🐛 Bug Fix
