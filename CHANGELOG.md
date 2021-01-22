@@ -1,3 +1,15 @@
+# v0.6.206 (Fri Jan 22 2021)
+
+#### 🐛 Bug Fix
+
+- Update dependency husky to v4.3.8 [#303](https://github.com/lshadler/forward-momentum/pull/303) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.205 (Fri Jan 22 2021)
 
 #### 🐛 Bug Fix
