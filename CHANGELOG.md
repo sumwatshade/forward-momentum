@@ -1,3 +1,15 @@
+# v0.6.209 (Mon Feb 08 2021)
+
+#### 🐛 Bug Fix
+
+- Update babel monorepo [#306](https://github.com/lshadler/forward-momentum/pull/306) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.208 (Mon Feb 08 2021)
 
 #### 🐛 Bug Fix
