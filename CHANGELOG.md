@@ -1,3 +1,15 @@
+# v0.6.211 (Tue Feb 09 2021)
+
+#### 🐛 Bug Fix
+
+- Update dependency @testing-library/svelte to v3.0.3 [#299](https://github.com/lshadler/forward-momentum/pull/299) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.210 (Mon Feb 08 2021)
 
 #### 🐛 Bug Fix
