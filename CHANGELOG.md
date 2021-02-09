@@ -1,3 +1,15 @@
+# v0.6.215 (Tue Feb 09 2021)
+
+#### 🐛 Bug Fix
+
+- Update dependency eslint-plugin-import to v2.22.1 [#225](https://github.com/lshadler/forward-momentum/pull/225) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.214 (Tue Feb 09 2021)
 
 #### 🐛 Bug Fix
