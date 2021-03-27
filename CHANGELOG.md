@@ -1,3 +1,15 @@
+# v0.6.218 (Sat Mar 27 2021)
+
+#### 🐛 Bug Fix
+
+- Update dependency @rollup/plugin-replace to v2.4.2 [#317](https://github.com/sumwatshade/forward-momentum/pull/317) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.217 (Sat Mar 27 2021)
 
 #### 🐛 Bug Fix
