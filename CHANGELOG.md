@@ -1,3 +1,15 @@
+# v0.6.220 (Sun Mar 28 2021)
+
+#### 🐛 Bug Fix
+
+- Update dependency eslint to v7.23.0 [#319](https://github.com/sumwatshade/forward-momentum/pull/319) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.219 (Sun Mar 28 2021)
 
 #### 🐛 Bug Fix
