@@ -1,3 +1,15 @@
+# v0.6.222 (Sun Mar 28 2021)
+
+#### 🐛 Bug Fix
+
+- Update dependency lint-staged to v10.5.4 [#309](https://github.com/sumwatshade/forward-momentum/pull/309) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.221 (Sun Mar 28 2021)
 
 #### 🐛 Bug Fix
