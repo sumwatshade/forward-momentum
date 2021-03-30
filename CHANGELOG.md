@@ -1,3 +1,15 @@
+# v0.6.224 (Tue Mar 30 2021)
+
+#### 🐛 Bug Fix
+
+- Update dependency rollup to v2.44.0 [#325](https://github.com/sumwatshade/forward-momentum/pull/325) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.223 (Mon Mar 29 2021)
 
 #### 🐛 Bug Fix
