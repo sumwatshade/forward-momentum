@@ -1,3 +1,15 @@
+# v0.6.228 (Wed May 05 2021)
+
+#### 🐛 Bug Fix
+
+- Update dependency eslint-plugin-cypress to v2.11.3 [#332](https://github.com/sumwatshade/forward-momentum/pull/332) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 1
+
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.6.227 (Wed May 05 2021)
 
 #### 🐛 Bug Fix
