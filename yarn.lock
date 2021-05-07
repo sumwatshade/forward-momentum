@@ -8347,10 +8347,10 @@ sane@^4.0.3:
     minimist "^1.1.1"
     walker "~1.0.5"
 
-sapper-google-analytics@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/sapper-google-analytics/-/sapper-google-analytics-1.0.1.tgz#21ef9a488672c9c01372a6ad9e7a516598af7a00"
-  integrity sha512-BC1a5TbKs4trx7mj55QTOTDppJFfUV9nc9vJ8vulEwpGwRxSaQR5rnASf+4EiDOQLT6ndWrKuepgZQz+xgQvFw==
+sapper-google-analytics@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/sapper-google-analytics/-/sapper-google-analytics-1.0.2.tgz#a2d3e38ef827ac31b2857f26b643510358affb84"
+  integrity sha512-l9e4dxUnk8zAxZNk44rGiIoRJK00R1RWPOGwDo62xvv7VepH8XpUG+gtLO0ow9UBmoglinzdnreD4KVNuhrYHQ==
 
 sapper@0.29.1:
   version "0.29.1"
