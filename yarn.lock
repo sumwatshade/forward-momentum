@@ -8352,10 +8352,10 @@ sapper-google-analytics@1.0.1:
   resolved "https://registry.yarnpkg.com/sapper-google-analytics/-/sapper-google-analytics-1.0.1.tgz#21ef9a488672c9c01372a6ad9e7a516598af7a00"
   integrity sha512-BC1a5TbKs4trx7mj55QTOTDppJFfUV9nc9vJ8vulEwpGwRxSaQR5rnASf+4EiDOQLT6ndWrKuepgZQz+xgQvFw==
 
-sapper@0.29.1:
-  version "0.29.1"
-  resolved "https://registry.yarnpkg.com/sapper/-/sapper-0.29.1.tgz#152102d97eb1ad4185671095052d976acf7187c1"
-  integrity sha512-f+YxEwES4QRSB6FubtD8z1031/5udNHmr2j0960VfjG3uQWtqkCzrJE06fRWh0p9jE3MGDMOcAF+XBLGWYsY3w==
+sapper@0.29.3:
+  version "0.29.3"
+  resolved "https://registry.yarnpkg.com/sapper/-/sapper-0.29.3.tgz#65290dc57e167c59ed2cfd4df3bd6c1df925930d"
+  integrity sha512-L9BHq8xUoaSQByy8MGnj38PEhNzAnu6Sj9dzzWrFyjxgtDmzKug38AhoJvUGoBOQaFlhMxipkbMACR38zbB5zg==
   dependencies:
     html-minifier "^4.0.0"
     http-link-header "^1.0.2"
