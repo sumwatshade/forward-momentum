@@ -1,3 +1,15 @@
+# v0.6.230 (Thu Jun 23 2022)
+
+#### 🐛 Bug Fix
+
+- Update babel monorepo [#342](https://github.com/sumwatshade/forward-momentum/pull/342) ([@renovate[bot]](https://github.com/renovate[bot]))
+
+#### Authors: 1
+
+- [@renovate[bot]](https://github.com/renovate[bot])
+
+---
+
 # v0.6.229 (Wed May 05 2021)
 
 #### 🐛 Bug Fix
