@@ -1,3 +1,15 @@
+# v0.6.231 (Fri Jun 24 2022)
+
+#### 🐛 Bug Fix
+
+- Update dependency @testing-library/jest-dom to v5.16.4 [#349](https://github.com/sumwatshade/forward-momentum/pull/349) ([@renovate[bot]](https://github.com/renovate[bot]))
+
+#### Authors: 1
+
+- [@renovate[bot]](https://github.com/renovate[bot])
+
+---
+
 # v0.6.230 (Thu Jun 23 2022)
 
 #### 🐛 Bug Fix
