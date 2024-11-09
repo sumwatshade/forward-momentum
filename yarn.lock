@@ -3596,9 +3596,9 @@ confusing-browser-globals@^1.0.9:
   resolved "https://registry.yarnpkg.com/confusing-browser-globals/-/confusing-browser-globals-1.0.9.tgz#72bc13b483c0276801681871d4898516f8f54fdd"
   integrity sha512-KbS1Y0jMtyPgIxjO7ZzMAuUpAKMt1SzCL9fsrKsX6b0zJPTaT0SiSPmewwVZg9UAO83HVIlEhZF84LIjZ0lmAw==
 
-"congress-legislators@https://github.com/unitedstates/congress-legislators.git":
+"congress-legislators@https://github.com/unitedstates/congress-legislators.git#main":
   version "0.0.0"
-  resolved "https://github.com/unitedstates/congress-legislators.git#60726a4cf705a309a4ad8df3e2bca2b62422bb57"
+  resolved "https://github.com/unitedstates/congress-legislators.git#1dc24b9904436835bad71a5c791cb320bda140a5"
 
 "contact-congress@https://github.com/unitedstates/contact-congress.git":
   version "0.0.0"
