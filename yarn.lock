@@ -8986,12 +8986,10 @@ supports-hyperlinks@^2.0.0:
     has-flag "^4.0.0"
     supports-color "^7.0.0"
 
-svelte-jester@1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/svelte-jester/-/svelte-jester-1.3.0.tgz#f7de754d581ba73418506a915f6a041e6b008fc3"
-  integrity sha512-WzWm+S98+RE623/JYzyjh5G8s8oSIaM6KeLLLXxxBFh/c0TlmuhPYIFhgA9GuovnQy6d/eBgJ8ogHyuBX29W3Q==
-  dependencies:
-    cosmiconfig "^6.0.0"
+svelte-jester@1.8.2:
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/svelte-jester/-/svelte-jester-1.8.2.tgz#2087657c96ba89de5f71f5e780374cd9c1c975ff"
+  integrity sha512-m2ZhsnBY8T8b1KFE9u8CzUzAt1YoBgKkPWIuzeIfKd9ImYfa/aoiOb3/JcnUQQI4m/j/cPjWMGUBsTXhkXB7HQ==
 
 svelte@3.29.0:
   version "3.29.0"
