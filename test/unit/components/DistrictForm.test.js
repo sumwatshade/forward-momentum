@@ -5,9 +5,9 @@ import { render } from '@testing-library/svelte';
 import Comp from '../../../src/components/DistrictForm.svelte';
 
 describe.skip('DistrictForm', () => {
-  test('matches snapshot', () => {
-    const { container } = render(Comp, {});
+	test('matches snapshot', () => {
+		const { container } = render(Comp, {});
 
-    expect(container.innerHTML).toMatchSnapshot();
-  });
+		expect(container.innerHTML).toMatchSnapshot();
+	});
 });

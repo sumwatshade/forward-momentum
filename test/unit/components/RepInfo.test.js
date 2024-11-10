@@ -6,9 +6,9 @@ import Comp from '../../../src/components/RepInfo.svelte';
 import rep from '../__helpers__/mock-rep';
 
 describe('RepInfo', () => {
-  test('matches snapshot', () => {
-    const { container } = render(Comp, { data: rep });
+	test('matches snapshot', () => {
+		const { container } = render(Comp, { data: rep });
 
-    expect(container.innerHTML).toMatchSnapshot();
-  });
+		expect(container.innerHTML).toMatchSnapshot();
+	});
 });
