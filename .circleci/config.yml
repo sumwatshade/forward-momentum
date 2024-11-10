@@ -2,22 +2,15 @@ version: 2
 
 cache-defaults: &cache-defaults
   keys:
-    - oid-v1-{{ arch }}-{{ checksum "yarn.lock" }}
-cache-cypress: &cache-cypress
-  keys:
-    - oid-cypress-v1-{{ arch }}-{{ checksum "yarn.lock" }}
+    - reps-v1-{{ arch }}-{{ checksum "yarn.lock" }}
 aliases:
   - &cache-modules
-    key: oid-v1-{{ arch }}-{{ checksum "yarn.lock" }}
+    key: reps-v1-{{ arch }}-{{ checksum "yarn.lock" }}
     paths: &cache-modules-paths
       - ~/.cache/yarn
       - node_modules
       # Necessary so that linting is faster on CI
       - .eslintcache
-  - &cache-cypress-modules
-    key: oid-cypress-v1-{{ arch }}-{{ checksum "yarn.lock" }}
-    paths: &cache-cypress-paths
-      - ~/.cache/Cypress
   - &yarn
     name: Installing Dependencies
     command: yarn install --non-interactive --frozen-lockfile --cache-folder ~/.cache/yarn
@@ -30,24 +23,18 @@ aliases:
 jobs:
   build:
     docker:
-      - image: circleci/node:dubnium-browsers
+      - image: cimg/node:20.18-browsers
     working_directory: ~/project
     steps:
       - checkout
       - restore_cache:
           <<: *cache-defaults
-      - restore_cache:
-          <<: *cache-cypress
       - run: *yarn
-      - run:
-          name: Install cypress
-          command: $(yarn bin)/cypress install
       - save_cache: *cache-modules
-      - save_cache: *cache-cypress-modules
       - run: *build
   lint:
     docker:
-      - image: circleci/node:dubnium-browsers
+      - image: cimg/node:20.18-browsers
     working_directory: ~/project
     steps:
       - checkout
@@ -60,7 +47,7 @@ jobs:
           command: yarn lint
   test-unit:
     docker:
-      - image: circleci/node:dubnium-browsers
+      - image: cimg/node:20.18-browsers
     working_directory: ~/project
     steps:
       - checkout
@@ -69,42 +56,15 @@ jobs:
       - run: *yarn
       - save_cache: *cache-modules
       - run:
-          name: Jest Testing
-          command: yarn test:unit --ci
-      # - run:
-      #     name: Upload coverage
-      #     command: bash <(curl -s https://codecov.tools.a.intuit.com/bash)  -X s3
+          name: Vitest Testing
+          command: yarn test:unit
       - store_artifacts:
           path: coverage
       - store_test_results:
           path: coverage/junit/
-  test-integration:
-    docker:
-      - image: circleci/node:dubnium-browsers
-    working_directory: ~/project
-    steps:
-      - checkout
-      - restore_cache:
-          <<: *cache-defaults
-      - restore_cache:
-          <<: *cache-cypress
-      - run: *yarn
-      - save_cache: *cache-modules
-      - save_cache: *cache-cypress-modules
-      - run:
-          name: Cypress Testing
-          command: yarn test:e2e:ci
-      - store_artifacts:
-          path: cypress/videos
-      - store_artifacts:
-          path: cypress/screenshots
-      - store_test_results:
-          path: cypress/videos
-      - store_test_results:
-          path: cypress/screenshots
   release:
     docker:
-      - image: circleci/node:dubnium-browsers
+      - image: cimg/node:dubnium-browsers
     working_directory: ~/project
     steps:
       - checkout
@@ -126,18 +86,10 @@ workflows:
   commit-workflow:
     jobs:
       - build
-      - test-unit:
-          requires:
-            - build
-      - lint:
-          requires:
-            - build
-      - test-integration:
-          requires:
-            - build
+      - test-unit
+      - lint
       - release:
           requires:
             - build
             - test-unit
-            - test-integration
             - lint

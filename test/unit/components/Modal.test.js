@@ -5,9 +5,9 @@ import { render } from '@testing-library/svelte';
 import Comp from '../../../src/components/Modal.svelte';
 
 describe('Modal', () => {
-  test('matches snapshot', () => {
-    const { container } = render(Comp, {});
+	test('matches snapshot', () => {
+		const { container } = render(Comp, {});
 
-    expect(container.innerHTML).toMatchSnapshot();
-  });
+		expect(container.innerHTML).toMatchSnapshot();
+	});
 });

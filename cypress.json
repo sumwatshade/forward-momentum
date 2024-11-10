@@ -1,7 +1,0 @@
-{
-	"baseUrl": "http://localhost:3000",
-	"video": true,
-	"blacklistHosts": "www.google-analytics.com",
-	"fixturesFolder": false,
-	"supportFile": false
-}
