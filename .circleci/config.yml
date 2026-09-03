@@ -23,7 +23,7 @@ aliases:
 jobs:
   build:
     docker:
-      - image: cimg/node:20.18-browsers
+      - image: cimg/node:20.18.3-browsers
     working_directory: ~/project
     steps:
       - checkout
@@ -34,7 +34,7 @@ jobs:
       - run: *build
   lint:
     docker:
-      - image: cimg/node:20.18-browsers
+      - image: cimg/node:20.18.3-browsers
     working_directory: ~/project
     steps:
       - checkout
@@ -47,7 +47,7 @@ jobs:
           command: yarn lint
   test-unit:
     docker:
-      - image: cimg/node:20.18-browsers
+      - image: cimg/node:20.18.3-browsers
     working_directory: ~/project
     steps:
       - checkout
@@ -64,7 +64,7 @@ jobs:
           path: coverage/junit/
   release:
     docker:
-      - image: cimg/node:dubnium-browsers
+      - image: cimg/node:10.24.1-browsers
     working_directory: ~/project
     steps:
       - checkout
